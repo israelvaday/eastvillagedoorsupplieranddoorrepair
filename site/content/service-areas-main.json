@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "east-village",
+    "name": "East Village",
+    "city": "Manhattan",
+    "kind": "neighborhood",
+    "lat": 40.7265,
+    "lng": -73.9815,
+    "parent": "manhattan",
+    "main": true
+  },
+  {
+    "slug": "alphabet-city",
+    "name": "Alphabet City",
+    "city": "Manhattan",
+    "kind": "neighborhood",
+    "lat": 40.725,
+    "lng": -73.974,
+    "parent": "manhattan",
+    "main": true
+  },
+  {
+    "slug": "lower-east-side",
+    "name": "Lower East Side",
+    "city": "Manhattan",
+    "kind": "neighborhood",
+    "lat": 40.715,
+    "lng": -73.9843,
+    "parent": "manhattan",
+    "main": true
+  },
+  {
+    "slug": "loisaida",
+    "name": "Loisaida",
+    "city": "Manhattan",
+    "kind": "neighborhood",
+    "lat": 40.722,
+    "lng": -73.978,
+    "parent": "manhattan",
+    "main": true
+  },
+  {
+    "slug": "greenwich-village",
+    "name": "Greenwich Village",
+    "city": "Manhattan",
+    "kind": "neighborhood",
+    "lat": 40.7336,
+    "lng": -74.0027,
+    "parent": "manhattan",
+    "main": true
+  },
+  {
+    "slug": "chelsea",
+    "name": "Chelsea",
+    "city": "Manhattan",
+    "kind": "neighborhood",
+    "lat": 40.7465,
+    "lng": -74.0014,
+    "parent": "manhattan",
+    "main": true
+  },
+  {
+    "slug": "upper-east-side",
+    "name": "Upper East Side",
+    "city": "Manhattan",
+    "kind": "neighborhood",
+    "lat": 40.7736,
+    "lng": -73.9566,
+    "parent": "manhattan",
+    "main": true
+  },
+  {
+    "slug": "williamsburg",
+    "name": "Williamsburg",
+    "city": "Brooklyn",
+    "kind": "neighborhood",
+    "lat": 40.7081,
+    "lng": -73.9571,
+    "parent": "brooklyn",
+    "main": true
+  },
+  {
+    "slug": "greenpoint",
+    "name": "Greenpoint",
+    "city": "Brooklyn",
+    "kind": "neighborhood",
+    "lat": 40.7282,
+    "lng": -73.9442,
+    "parent": "brooklyn",
+    "main": true
+  },
+  {
+    "slug": "downtown-brooklyn",
+    "name": "Downtown Brooklyn",
+    "city": "Brooklyn",
+    "kind": "neighborhood",
+    "lat": 40.6933,
+    "lng": -73.9857,
+    "parent": "brooklyn",
+    "main": true
+  },
+  {
+    "slug": "park-slope",
+    "name": "Park Slope",
+    "city": "Brooklyn",
+    "kind": "neighborhood",
+    "lat": 40.671,
+    "lng": -73.9814,
+    "parent": "brooklyn",
+    "main": true
+  }
+]

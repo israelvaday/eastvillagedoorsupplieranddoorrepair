@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  background: #F8F6F3;
+  color: #2E2B28;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Warm editorial backdrop for hero sections */
+.bg-aurora {
+  background:
+    radial-gradient(55% 55% at 15% 8%, rgba(13,110,110,0.10) 0%, rgba(13,110,110,0) 55%),
+    radial-gradient(45% 45% at 88% 15%, rgba(224,122,95,0.08) 0%, rgba(224,122,95,0) 55%),
+    radial-gradient(65% 65% at 50% 100%, rgba(13,110,110,0.06) 0%, rgba(13,110,110,0) 60%),
+    #F8F6F3;
+}
+
+/* Subtle line grid */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(13,110,110,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13,110,110,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Teal-to-coral accent text */
+.text-accent-gradient {
+  background: linear-gradient(135deg, #0D6E6E 0%, #3AA8A8 35%, #E07A5F 70%, #C85A3E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Solid bordered panels (replaces glassmorphism) */
+.glass {
+  background: rgba(253, 252, 250, 0.92);
+  border: 1px solid rgba(13, 110, 110, 0.14);
+  box-shadow: 0 1px 3px rgba(26, 25, 23, 0.06);
+}
+
+/* Shimmer for CTAs */
+.shimmer {
+  background-image: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Focus rings */
+*:focus-visible {
+  outline: 2px solid #0D6E6E;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@keyframes marquee-slide {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+.marquee-track {
+  animation: marquee-slide 60s linear infinite;
+  will-change: transform;
+}
+@media (max-width: 767px) {
+  .marquee-track { animation-duration: 32s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}

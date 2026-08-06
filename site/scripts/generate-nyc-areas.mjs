@@ -1,0 +1,123 @@
+/**
+ * Generate 100 NYC service areas radiating from East Village HQ (10009).
+ */
+import { writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+const AREAS = [
+  // Manhattan — East Village, LES & downtown (50)
+  { slug: "east-village", name: "East Village", city: "Manhattan", kind: "neighborhood", lat: 40.7265, lng: -73.9815, parent: "manhattan", main: true },
+  { slug: "alphabet-city", name: "Alphabet City", city: "Manhattan", kind: "neighborhood", lat: 40.725, lng: -73.974, parent: "manhattan", main: true },
+  { slug: "lower-east-side", name: "Lower East Side", city: "Manhattan", kind: "neighborhood", lat: 40.715, lng: -73.9843, parent: "manhattan", main: true },
+  { slug: "loisaida", name: "Loisaida", city: "Manhattan", kind: "neighborhood", lat: 40.722, lng: -73.978, parent: "manhattan", main: true },
+  { slug: "two-bridges", name: "Two Bridges", city: "Manhattan", kind: "neighborhood", lat: 40.711, lng: -73.993, parent: "manhattan", main: false },
+  { slug: "chinatown", name: "Chinatown", city: "Manhattan", kind: "neighborhood", lat: 40.7158, lng: -73.997, parent: "manhattan", main: false },
+  { slug: "little-italy", name: "Little Italy", city: "Manhattan", kind: "neighborhood", lat: 40.7191, lng: -73.9973, parent: "manhattan", main: false },
+  { slug: "nolita", name: "NoLita", city: "Manhattan", kind: "neighborhood", lat: 40.723, lng: -73.9955, parent: "manhattan", main: false },
+  { slug: "noho", name: "NoHo", city: "Manhattan", kind: "neighborhood", lat: 40.7267, lng: -73.9925, parent: "manhattan", main: false },
+  { slug: "soho", name: "SoHo", city: "Manhattan", kind: "neighborhood", lat: 40.7233, lng: -74.003, parent: "manhattan", main: false },
+  { slug: "greenwich-village", name: "Greenwich Village", city: "Manhattan", kind: "neighborhood", lat: 40.7336, lng: -74.0027, parent: "manhattan", main: true },
+  { slug: "west-village", name: "West Village", city: "Manhattan", kind: "neighborhood", lat: 40.7358, lng: -74.0033, parent: "manhattan", main: false },
+  { slug: "union-square", name: "Union Square", city: "Manhattan", kind: "neighborhood", lat: 40.7359, lng: -73.9906, parent: "manhattan", main: false },
+  { slug: "gramercy", name: "Gramercy", city: "Manhattan", kind: "neighborhood", lat: 40.7375, lng: -73.9858, parent: "manhattan", main: false },
+  { slug: "stuyvesant-town", name: "Stuyvesant Town", city: "Manhattan", kind: "neighborhood", lat: 40.731, lng: -73.974, parent: "manhattan", main: false },
+  { slug: "peter-cooper-village", name: "Peter Cooper Village", city: "Manhattan", kind: "neighborhood", lat: 40.732, lng: -73.976, parent: "manhattan", main: false },
+  { slug: "kips-bay", name: "Kips Bay", city: "Manhattan", kind: "neighborhood", lat: 40.744, lng: -73.978, parent: "manhattan", main: false },
+  { slug: "murray-hill", name: "Murray Hill", city: "Manhattan", kind: "neighborhood", lat: 40.7479, lng: -73.9757, parent: "manhattan", main: false },
+  { slug: "flatiron", name: "Flatiron", city: "Manhattan", kind: "neighborhood", lat: 40.7411, lng: -73.9897, parent: "manhattan", main: false },
+  { slug: "chelsea", name: "Chelsea", city: "Manhattan", kind: "neighborhood", lat: 40.7465, lng: -74.0014, parent: "manhattan", main: true },
+  { slug: "meatpacking-district", name: "Meatpacking District", city: "Manhattan", kind: "neighborhood", lat: 40.741, lng: -74.006, parent: "manhattan", main: false },
+  { slug: "hudson-yards", name: "Hudson Yards", city: "Manhattan", kind: "neighborhood", lat: 40.754, lng: -74.002, parent: "manhattan", main: false },
+  { slug: "financial-district", name: "Financial District", city: "Manhattan", kind: "neighborhood", lat: 40.7075, lng: -74.0113, parent: "manhattan", main: false },
+  { slug: "tribeca", name: "Tribeca", city: "Manhattan", kind: "neighborhood", lat: 40.7163, lng: -74.0086, parent: "manhattan", main: false },
+  { slug: "battery-park-city", name: "Battery Park City", city: "Manhattan", kind: "neighborhood", lat: 40.7115, lng: -74.0155, parent: "manhattan", main: false },
+  { slug: "midtown", name: "Midtown", city: "Manhattan", kind: "neighborhood", lat: 40.7549, lng: -73.984, parent: "manhattan", main: false },
+  { slug: "midtown-east", name: "Midtown East", city: "Manhattan", kind: "neighborhood", lat: 40.758, lng: -73.971, parent: "manhattan", main: false },
+  { slug: "midtown-west", name: "Midtown West", city: "Manhattan", kind: "neighborhood", lat: 40.763, lng: -73.991, parent: "manhattan", main: false },
+  { slug: "hells-kitchen", name: "Hell's Kitchen", city: "Manhattan", kind: "neighborhood", lat: 40.7638, lng: -73.9918, parent: "manhattan", main: false },
+  { slug: "garment-district", name: "Garment District", city: "Manhattan", kind: "neighborhood", lat: 40.754, lng: -73.9895, parent: "manhattan", main: false },
+  { slug: "theater-district", name: "Theater District", city: "Manhattan", kind: "neighborhood", lat: 40.759, lng: -73.9845, parent: "manhattan", main: false },
+  { slug: "turtle-bay", name: "Turtle Bay", city: "Manhattan", kind: "neighborhood", lat: 40.752, lng: -73.969, parent: "manhattan", main: false },
+  { slug: "sutton-place", name: "Sutton Place", city: "Manhattan", kind: "neighborhood", lat: 40.758, lng: -73.962, parent: "manhattan", main: false },
+  { slug: "upper-east-side", name: "Upper East Side", city: "Manhattan", kind: "neighborhood", lat: 40.7736, lng: -73.9566, parent: "manhattan", main: true },
+  { slug: "yorkville", name: "Yorkville", city: "Manhattan", kind: "neighborhood", lat: 40.776, lng: -73.954, parent: "manhattan", main: false },
+  { slug: "lenox-hill", name: "Lenox Hill", city: "Manhattan", kind: "neighborhood", lat: 40.769, lng: -73.958, parent: "manhattan", main: false },
+  { slug: "carnegie-hill", name: "Carnegie Hill", city: "Manhattan", kind: "neighborhood", lat: 40.785, lng: -73.952, parent: "manhattan", main: false },
+  { slug: "upper-west-side", name: "Upper West Side", city: "Manhattan", kind: "neighborhood", lat: 40.787, lng: -73.9754, parent: "manhattan", main: false },
+  { slug: "lincoln-square", name: "Lincoln Square", city: "Manhattan", kind: "neighborhood", lat: 40.775, lng: -73.982, parent: "manhattan", main: false },
+  { slug: "morningside-heights", name: "Morningside Heights", city: "Manhattan", kind: "neighborhood", lat: 40.8075, lng: -73.9625, parent: "manhattan", main: false },
+  { slug: "harlem", name: "Harlem", city: "Manhattan", kind: "neighborhood", lat: 40.8116, lng: -73.9465, parent: "manhattan", main: false },
+  { slug: "east-harlem", name: "East Harlem", city: "Manhattan", kind: "neighborhood", lat: 40.7947, lng: -73.9425, parent: "manhattan", main: false },
+  { slug: "washington-heights", name: "Washington Heights", city: "Manhattan", kind: "neighborhood", lat: 40.8417, lng: -73.9396, parent: "manhattan", main: false },
+  { slug: "inwood", name: "Inwood", city: "Manhattan", kind: "neighborhood", lat: 40.8677, lng: -73.9212, parent: "manhattan", main: false },
+  { slug: "roosevelt-island", name: "Roosevelt Island", city: "Manhattan", kind: "neighborhood", lat: 40.762, lng: -73.949, parent: "manhattan", main: false },
+  { slug: "bowery", name: "Bowery", city: "Manhattan", kind: "neighborhood", lat: 40.72, lng: -73.993, parent: "manhattan", main: false },
+  { slug: "east-village-10009", name: "East Village 10009", city: "Manhattan", kind: "zip", lat: 40.726, lng: -73.981, parent: "manhattan", main: false },
+  { slug: "lower-east-side-10002", name: "Lower East Side 10002", city: "Manhattan", kind: "zip", lat: 40.715, lng: -73.987, parent: "manhattan", main: false },
+  { slug: "alphabet-city-10009", name: "Alphabet City 10009", city: "Manhattan", kind: "zip", lat: 40.724, lng: -73.976, parent: "manhattan", main: false },
+  { slug: "east-village-10003", name: "East Village 10003", city: "Manhattan", kind: "zip", lat: 40.731, lng: -73.989, parent: "manhattan", main: false },
+  { slug: "greenwich-village-10014", name: "Greenwich Village 10014", city: "Manhattan", kind: "zip", lat: 40.734, lng: -74.005, parent: "manhattan", main: false },
+  // Brooklyn — 50 neighborhoods radiating from East River crossings
+  { slug: "williamsburg", name: "Williamsburg", city: "Brooklyn", kind: "neighborhood", lat: 40.7081, lng: -73.9571, parent: "brooklyn", main: true },
+  { slug: "greenpoint", name: "Greenpoint", city: "Brooklyn", kind: "neighborhood", lat: 40.7282, lng: -73.9442, parent: "brooklyn", main: true },
+  { slug: "dumbo", name: "DUMBO", city: "Brooklyn", kind: "neighborhood", lat: 40.7033, lng: -73.9896, parent: "brooklyn", main: false },
+  { slug: "brooklyn-heights", name: "Brooklyn Heights", city: "Brooklyn", kind: "neighborhood", lat: 40.696, lng: -73.9939, parent: "brooklyn", main: false },
+  { slug: "downtown-brooklyn", name: "Downtown Brooklyn", city: "Brooklyn", kind: "neighborhood", lat: 40.6933, lng: -73.9857, parent: "brooklyn", main: true },
+  { slug: "fort-greene", name: "Fort Greene", city: "Brooklyn", kind: "neighborhood", lat: 40.6892, lng: -73.9748, parent: "brooklyn", main: false },
+  { slug: "boerum-hill", name: "Boerum Hill", city: "Brooklyn", kind: "neighborhood", lat: 40.6869, lng: -73.9847, parent: "brooklyn", main: false },
+  { slug: "cobble-hill", name: "Cobble Hill", city: "Brooklyn", kind: "neighborhood", lat: 40.6865, lng: -73.9962, parent: "brooklyn", main: false },
+  { slug: "carroll-gardens", name: "Carroll Gardens", city: "Brooklyn", kind: "neighborhood", lat: 40.6785, lng: -73.9982, parent: "brooklyn", main: false },
+  { slug: "red-hook", name: "Red Hook", city: "Brooklyn", kind: "neighborhood", lat: 40.6754, lng: -74.0097, parent: "brooklyn", main: false },
+  { slug: "gowanus", name: "Gowanus", city: "Brooklyn", kind: "neighborhood", lat: 40.6733, lng: -73.9903, parent: "brooklyn", main: false },
+  { slug: "park-slope", name: "Park Slope", city: "Brooklyn", kind: "neighborhood", lat: 40.671, lng: -73.9814, parent: "brooklyn", main: true },
+  { slug: "prospect-heights", name: "Prospect Heights", city: "Brooklyn", kind: "neighborhood", lat: 40.6779, lng: -73.9687, parent: "brooklyn", main: false },
+  { slug: "clinton-hill", name: "Clinton Hill", city: "Brooklyn", kind: "neighborhood", lat: 40.6896, lng: -73.9661, parent: "brooklyn", main: false },
+  { slug: "bedford-stuyvesant", name: "Bedford-Stuyvesant", city: "Brooklyn", kind: "neighborhood", lat: 40.6872, lng: -73.9418, parent: "brooklyn", main: false },
+  { slug: "bushwick", name: "Bushwick", city: "Brooklyn", kind: "neighborhood", lat: 40.6944, lng: -73.9213, parent: "brooklyn", main: false },
+  { slug: "crown-heights", name: "Crown Heights", city: "Brooklyn", kind: "neighborhood", lat: 40.6694, lng: -73.9422, parent: "brooklyn", main: false },
+  { slug: "vinegar-hill", name: "Vinegar Hill", city: "Brooklyn", kind: "neighborhood", lat: 40.7036, lng: -73.982, parent: "brooklyn", main: false },
+  { slug: "navy-yard", name: "Navy Yard", city: "Brooklyn", kind: "neighborhood", lat: 40.6995, lng: -73.9725, parent: "brooklyn", main: false },
+  { slug: "sunset-park", name: "Sunset Park", city: "Brooklyn", kind: "neighborhood", lat: 40.6455, lng: -73.9943, parent: "brooklyn", main: false },
+  { slug: "bay-ridge", name: "Bay Ridge", city: "Brooklyn", kind: "neighborhood", lat: 40.6344, lng: -74.0236, parent: "brooklyn", main: false },
+  { slug: "south-slope", name: "South Slope", city: "Brooklyn", kind: "neighborhood", lat: 40.662, lng: -73.9865, parent: "brooklyn", main: false },
+  { slug: "windsor-terrace", name: "Windsor Terrace", city: "Brooklyn", kind: "neighborhood", lat: 40.655, lng: -73.9758, parent: "brooklyn", main: false },
+  { slug: "kensington", name: "Kensington", city: "Brooklyn", kind: "neighborhood", lat: 40.6375, lng: -73.9768, parent: "brooklyn", main: false },
+  { slug: "flatbush", name: "Flatbush", city: "Brooklyn", kind: "neighborhood", lat: 40.6526, lng: -73.9597, parent: "brooklyn", main: false },
+  { slug: "prospect-lefferts-gardens", name: "Prospect Lefferts Gardens", city: "Brooklyn", kind: "neighborhood", lat: 40.66, lng: -73.9502, parent: "brooklyn", main: false },
+  { slug: "ditmas-park", name: "Ditmas Park", city: "Brooklyn", kind: "neighborhood", lat: 40.636, lng: -73.962, parent: "brooklyn", main: false },
+  { slug: "bensonhurst", name: "Bensonhurst", city: "Brooklyn", kind: "neighborhood", lat: 40.6019, lng: -73.9947, parent: "brooklyn", main: false },
+  { slug: "borough-park", name: "Borough Park", city: "Brooklyn", kind: "neighborhood", lat: 40.6335, lng: -73.9969, parent: "brooklyn", main: false },
+  { slug: "midwood", name: "Midwood", city: "Brooklyn", kind: "neighborhood", lat: 40.6201, lng: -73.9597, parent: "brooklyn", main: false },
+  { slug: "sheepshead-bay", name: "Sheepshead Bay", city: "Brooklyn", kind: "neighborhood", lat: 40.5869, lng: -73.9545, parent: "brooklyn", main: false },
+  { slug: "brighton-beach", name: "Brighton Beach", city: "Brooklyn", kind: "neighborhood", lat: 40.5779, lng: -73.9597, parent: "brooklyn", main: false },
+  { slug: "coney-island", name: "Coney Island", city: "Brooklyn", kind: "neighborhood", lat: 40.5755, lng: -73.9707, parent: "brooklyn", main: false },
+  { slug: "gravesend", name: "Gravesend", city: "Brooklyn", kind: "neighborhood", lat: 40.5915, lng: -73.9741, parent: "brooklyn", main: false },
+  { slug: "marine-park", name: "Marine Park", city: "Brooklyn", kind: "neighborhood", lat: 40.6115, lng: -73.9336, parent: "brooklyn", main: false },
+  { slug: "canarsie", name: "Canarsie", city: "Brooklyn", kind: "neighborhood", lat: 40.6407, lng: -73.9016, parent: "brooklyn", main: false },
+  { slug: "east-flatbush", name: "East Flatbush", city: "Brooklyn", kind: "neighborhood", lat: 40.6536, lng: -73.9294, parent: "brooklyn", main: false },
+  { slug: "brownsville", name: "Brownsville", city: "Brooklyn", kind: "neighborhood", lat: 40.6657, lng: -73.9127, parent: "brooklyn", main: false },
+  { slug: "east-new-york", name: "East New York", city: "Brooklyn", kind: "neighborhood", lat: 40.6664, lng: -73.8824, parent: "brooklyn", main: false },
+  { slug: "cypress-hills", name: "Cypress Hills", city: "Brooklyn", kind: "neighborhood", lat: 40.683, lng: -73.872, parent: "brooklyn", main: false },
+  { slug: "williamsburg-11211", name: "Williamsburg 11211", city: "Brooklyn", kind: "zip", lat: 40.712, lng: -73.955, parent: "brooklyn", main: false },
+  { slug: "dumbo-11201", name: "DUMBO 11201", city: "Brooklyn", kind: "zip", lat: 40.703, lng: -73.989, parent: "brooklyn", main: false },
+  { slug: "park-slope-11215", name: "Park Slope 11215", city: "Brooklyn", kind: "zip", lat: 40.668, lng: -73.986, parent: "brooklyn", main: false },
+  { slug: "greenpoint-11222", name: "Greenpoint 11222", city: "Brooklyn", kind: "zip", lat: 40.728, lng: -73.951, parent: "brooklyn", main: false },
+  { slug: "bed-stuy-11205", name: "Bedford-Stuyvesant 11205", city: "Brooklyn", kind: "zip", lat: 40.691, lng: -73.957, parent: "brooklyn", main: false },
+  { slug: "bushwick-11206", name: "Bushwick 11206", city: "Brooklyn", kind: "zip", lat: 40.701, lng: -73.933, parent: "brooklyn", main: false },
+  { slug: "sunset-park-11220", name: "Sunset Park 11220", city: "Brooklyn", kind: "zip", lat: 40.641, lng: -74.002, parent: "brooklyn", main: false },
+  { slug: "bay-ridge-11209", name: "Bay Ridge 11209", city: "Brooklyn", kind: "zip", lat: 40.628, lng: -74.022, parent: "brooklyn", main: false },
+  { slug: "crown-heights-11213", name: "Crown Heights 11213", city: "Brooklyn", kind: "zip", lat: 40.671, lng: -73.936, parent: "brooklyn", main: false },
+];
+
+if (AREAS.length !== 100) {
+  throw new Error(`Expected 100 areas, got ${AREAS.length}`);
+}
+
+const MAIN = AREAS.filter((a) => a.main);
+
+writeFileSync(join(ROOT, "content/service-areas.json"), `${JSON.stringify(AREAS, null, 2)}\n`);
+writeFileSync(join(ROOT, "content/service-areas-main.json"), `${JSON.stringify(MAIN, null, 2)}\n`);
+console.log(`Wrote ${AREAS.length} service areas (${MAIN.length} featured)`);
