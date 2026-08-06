@@ -1,13 +1,1 @@
-node_modules/
-.deploy/
-/photos/
-site/node_modules/
-site/.next/
-site/out/
-site/.static-build-stash/
-*.tsbuildinfo
-.env*.local
-.DS_Store
-.vercel
-site/openrouter-generate.log
-site/openrouter-generate-full.log
+# GitHub Pages deploy — keep all exported static files
