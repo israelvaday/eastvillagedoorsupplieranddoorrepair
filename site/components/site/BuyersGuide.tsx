@@ -40,7 +40,7 @@ export function BuyersGuide() {
           scheduling. Confirm debris removal, protection of common areas, and the final walkthrough.
         </p>
         <p>
-          {BIZ.name} serves Brooklyn, Manhattan, and Queens and answers project questions at {BIZ.phone}. Compare
+          {BIZ.name} serves Manhattan and Brooklyn and answers project questions at {BIZ.phone}. Compare
           estimates only after the door type, hardware, framing, and closeout expectations are aligned.
         </p>
       </div>

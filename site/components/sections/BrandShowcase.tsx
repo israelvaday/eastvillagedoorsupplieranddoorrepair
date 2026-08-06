@@ -8,7 +8,7 @@ const FRAME_DETAILS = [
   { slug: "commercial-door-installation", Icon: Building2, label: "Commercial entrance systems" },
   { slug: "custom-door-fabrication", Icon: DoorOpen, label: "Custom fabrication" },
   { slug: "door-hardware-supply", Icon: Package, label: "Hardware & security" },
-  { slug: "emergency-door-repair", Icon: AlertTriangle, label: "Serving Brooklyn & NYC" },
+  { slug: "emergency-door-repair", Icon: AlertTriangle, label: "Serving East Village & NYC" },
 ] as const;
 
 export function BrandShowcase() {

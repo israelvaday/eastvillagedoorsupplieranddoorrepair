@@ -43,7 +43,7 @@ export default function ServicesPage() {
                 photoAlt={`${s.name} project inspiration`}
                 photoW={1600}
                 photoH={900}
-                city="Brooklyn, NY"
+                city="New York, NY"
                 priority={i < 3}
               />
           ))}

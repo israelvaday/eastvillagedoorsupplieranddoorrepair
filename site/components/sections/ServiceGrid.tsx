@@ -34,7 +34,7 @@ export function ServiceGrid({ city }: { city?: string }) {
                   photoAlt={`${s.name} project inspiration`}
                   photoW={1600}
                   photoH={900}
-                  city={city ?? "Brooklyn, NY"}
+                  city={city ?? "New York, NY"}
                   priority={false}
                 />
               </Reveal>
