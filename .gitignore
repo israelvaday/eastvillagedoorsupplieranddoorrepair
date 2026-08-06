@@ -1,6 +1,6 @@
 node_modules/
 .deploy/
-photos/
+/photos/
 site/node_modules/
 site/.next/
 site/out/
