@@ -4,58 +4,59 @@
 
 :root {
   color-scheme: light;
+  --brand-indigo: #1E3558;
+  --brand-amber: #F59E0B;
+  --brand-surface: #EEF1F7;
 }
 
 html, body {
-  background: #F8F6F3;
-  color: #2E2B28;
+  background: var(--brand-surface);
+  color: #141820;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Warm editorial backdrop for hero sections */
 .bg-aurora {
   background:
-    radial-gradient(55% 55% at 15% 8%, rgba(13,110,110,0.10) 0%, rgba(13,110,110,0) 55%),
-    radial-gradient(45% 45% at 88% 15%, rgba(224,122,95,0.08) 0%, rgba(224,122,95,0) 55%),
-    radial-gradient(65% 65% at 50% 100%, rgba(13,110,110,0.06) 0%, rgba(13,110,110,0) 60%),
-    #F8F6F3;
+    radial-gradient(50% 50% at 10% 0%, rgba(45,74,122,0.14) 0%, rgba(45,74,122,0) 60%),
+    radial-gradient(40% 40% at 95% 10%, rgba(245,158,11,0.12) 0%, rgba(245,158,11,0) 55%),
+    linear-gradient(180deg, #F8F9FC 0%, #EEF1F7 100%);
 }
 
-/* Subtle line grid */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(13,110,110,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(13,110,110,0.04) 1px, transparent 1px);
-  background-size: 32px 32px;
+    linear-gradient(rgba(30,53,88,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,53,88,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-/* Teal-to-coral accent text */
 .text-accent-gradient {
-  background: linear-gradient(135deg, #0D6E6E 0%, #3AA8A8 35%, #E07A5F 70%, #C85A3E 100%);
+  background: linear-gradient(120deg, #1E3558 0%, #2D4A7A 35%, #F59E0B 70%, #D97706 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Solid bordered panels (replaces glassmorphism) */
 .glass {
-  background: rgba(253, 252, 250, 0.92);
-  border: 1px solid rgba(13, 110, 110, 0.14);
-  box-shadow: 0 1px 3px rgba(26, 25, 23, 0.06);
+  background: rgba(10, 18, 32, 0.92);
+  border-bottom: 2px solid rgba(245, 158, 11, 0.55);
+  box-shadow: var(--tw-shadow-nav, 0 1px 0 rgba(245,158,11,0.45));
 }
 
-/* Shimmer for CTAs */
+.section-rule {
+  border-top: 3px solid #1E3558;
+  border-bottom: 1px solid #DDE3EE;
+}
+
 .shimmer {
   background-image: linear-gradient(
     110deg,
     transparent 30%,
-    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.4) 50%,
     transparent 70%
   );
   background-size: 200% 100%;
 }
 
-/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
@@ -64,11 +65,9 @@ html, body {
   }
 }
 
-/* Focus rings */
 *:focus-visible {
-  outline: 2px solid #0D6E6E;
+  outline: 2px solid #F59E0B;
   outline-offset: 2px;
-  border-radius: 2px;
 }
 
 @keyframes marquee-slide {

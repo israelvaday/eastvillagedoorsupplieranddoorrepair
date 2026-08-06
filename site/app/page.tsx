@@ -16,9 +16,9 @@ import { BuyersGuide } from "@/components/site/BuyersGuide";
 import { PaintingGlossary } from "@/components/site/PaintingGlossary";
 
 export const metadata: Metadata = {
-  title: "Door Supply, Installation & Repair — Brooklyn & NYC",
+  title: "East Village Door Supplier & Repair - Manhattan & Brooklyn's Door Experts",
   description:
-    `${BIZ.name} provides residential and commercial door supply, installation, structural repair, fire-rated doors, hardware, and emergency service across Manhattan & Brooklyn. Request a free estimate.`,
+    `East Village Door Supplier & Repair offers expert door sales, installation, and repair services in Manhattan & Brooklyn. Quality doors for homes & businesses.`,
   alternates: { canonical: "/" },
 };
 
@@ -26,7 +26,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <section className="border-y border-cream-300 bg-cream-100/60 py-12 md:py-16">
+      <section className="border-y border-stone-300 bg-stone-100/60 py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal variant="zoom">
             <LazyFloatOnScroll>
@@ -45,7 +45,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal variant="bounce">
             <div className="mb-6">
-              <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">Coverage</p>
+              <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">Coverage</p>
               <h2 className="mt-2 font-display text-3xl font-bold tracking-tight md:text-4xl">
                 Manhattan &amp; Brooklyn — service coverage map.
               </h2>

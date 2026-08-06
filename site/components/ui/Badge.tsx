@@ -10,10 +10,10 @@ export function Badge({
   tone?: "default" | "open" | "closed" | "brass";
 }) {
   const tones = {
-    default: "bg-cream-200 text-cream-800 border-cream-300",
+    default: "bg-stone-200 text-stone-800 border-stone-300",
     open:    "bg-emerald-500/10 text-emerald-300 border-emerald-500/30",
     closed:  "bg-red-500/10 text-red-300 border-red-500/30",
-    brass:   "bg-teal-500/10 text-teal-600 border-teal-500/30",
+    brass:   "bg-indigo-500/10 text-indigo-600 border-indigo-500/30",
   };
   return (
     <span

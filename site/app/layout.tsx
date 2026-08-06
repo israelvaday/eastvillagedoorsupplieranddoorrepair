@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Fraunces, JetBrains_Mono } from "next/font/google";
+import { Outfit, Libre_Baskerville, JetBrains_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
 import { BIZ } from "@/lib/business";
@@ -8,8 +8,8 @@ import { Footer } from "@/components/site/Footer";
 import { MobileDock } from "@/components/site/MobileDock";
 import { localBusinessJsonLd } from "@/lib/schema";
 
-const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans", display: "optional", adjustFontFallback: true });
-const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", display: "optional", adjustFontFallback: true });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit", display: "optional", adjustFontFallback: true });
+const libre = Libre_Baskerville({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-libre-baskerville", display: "optional", adjustFontFallback: true });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "optional", adjustFontFallback: true });
 
 export const metadata: Metadata = {
@@ -56,14 +56,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#F8F6F3",
+  themeColor: "#1E3558",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-US" className={`${dmSans.variable} ${fraunces.variable} ${mono.variable}`}>
+    <html lang="en-US" className={`${outfit.variable} ${libre.variable} ${mono.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -72,12 +72,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="font-sans bg-cream-100 text-cream-900 antialiased">
+      <body className="font-sans bg-stone-100 text-stone-900 antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />
         <MobileDock />
-        <Toaster position="top-center" theme="light" richColors />
+        <Toaster position="top-center" theme="dark" richColors />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd()) }}

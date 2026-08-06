@@ -19,17 +19,17 @@ export type BlogPost = {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "choosing-entry-door-brooklyn-brownstone",
-    title: "How to Choose an Entry Door for a Brooklyn Brownstone",
-    metaTitle: "Entry Door Guide for Brooklyn Brownstones",
+    title: "Choosing the Perfect Entry Door for Your East Village Brownstone",
+    metaTitle: "East Village Entry Doors: Style, Security, & NYC Codes",
     excerpt:
-      "Historic profiles, security needs, and NYC weather all influence the right entry door for a Brooklyn townhouse or brownstone.",
+      "Selecting an entry door for your East Village brownstone involves balancing classic aesthetics with modern security and energy efficiency. We explore options that enhance curb appeal while meeting stringent NYC building regulations.",
     category: "Residential",
     readMinutes: 6,
     date: "2026-01-16",
     heroImage: "/blog/choosing-entry-door-brooklyn-brownstone-hero.png",
-    heroAlt: "Premium solid wood entry door installed on a Brooklyn brownstone",
+    heroAlt: "Elegant dark wood entry door with ornate glass in an East Village brownstone facade.",
     secondaryImage: "/blog/choosing-entry-door-brooklyn-brownstone-secondary.png",
-    secondaryAlt: "Door technician measuring a historic Brooklyn entry opening",
+    secondaryAlt: "Close-up of a secure, decorative door knocker and lock on an East Village brownstone door.",
     body: `
 Brooklyn brownstones and townhouses present a unique combination of historic architecture, settled frames, and modern security expectations. The right entry door must fit an often-non-standard opening, complement original casings, and withstand NYC humidity, heat, and winter weather.
 
@@ -60,17 +60,17 @@ East Village Door Supplier and Door Repair helps Brooklyn homeowners select, fab
   },
   {
     slug: "fire-rated-doors-nyc-multifamily",
-    title: "Fire-Rated Doors in NYC Multifamily Buildings: What Owners Need to Know",
-    metaTitle: "Fire-Rated Door Requirements NYC Multifamily",
+    title: "Fire-Rated Doors: Essential for East Village Multifamily Buildings",
+    metaTitle: "NYC Fire Door Requirements for Lower East Side Apartments",
     excerpt:
-      "UL labels, self-closing hardware, and corridor assemblies — the essentials for compliant multifamily door replacement in NYC.",
+      "Understanding and implementing fire-rated doors is crucial for the safety and compliance of multifamily buildings in the East Village and Lower East Side. This guide covers key regulations and installation considerations for NYC properties.",
     category: "Commercial",
     readMinutes: 7,
     date: "2026-02-12",
     heroImage: "/blog/fire-rated-doors-nyc-multifamily-hero.png",
-    heroAlt: "Fire-rated corridor door with UL label installed in a NYC apartment building",
+    heroAlt: "A modern, fire-rated apartment entrance door with a clear fire safety rating label.",
     secondaryImage: "/blog/fire-rated-doors-nyc-multifamily-secondary.png",
-    secondaryAlt: "Self-closing hardware on a fire-rated door assembly",
+    secondaryAlt: "Diagram illustrating fire door components and their role in containing a fire in an NYC apartment building.",
     body: `
 Multifamily and mixed-use buildings across Manhattan and Brooklyn must maintain fire-rated door assemblies in corridors, stairwells, and other code-required locations. Replacing a fire door is not the same as swapping a residential interior slab — the assembly, label, and hardware must work together.
 
@@ -97,17 +97,17 @@ East Village Door Supplier and Door Repair supplies and installs fire-rated door
   },
   {
     slug: "storefront-door-repair-nyc-retail",
-    title: "Storefront Door Repair for NYC Retail: Common Failures and Fixes",
-    metaTitle: "NYC Storefront Door Repair Guide",
+    title: "Storefront Door Repair & Installation for East Village Retailers",
+    metaTitle: "East Village Storefront Doors: Repair, Installation, & Security",
     excerpt:
-      "Floor closers, panic hardware, and weather seals — what causes NYC storefront doors to fail and how to fix them properly.",
+      "A damaged storefront door can deter customers and compromise security for East Village and Lower East Side businesses. Learn about common repair needs and robust installation solutions tailored for NYC retail spaces.",
     category: "Commercial",
     readMinutes: 6,
     date: "2026-03-05",
     heroImage: "/blog/storefront-door-repair-nyc-retail-hero.png",
-    heroAlt: "Aluminum storefront entrance door on a NYC retail shop",
+    heroAlt: "A sleek glass storefront door of a boutique shop in the East Village, reflecting street activity.",
     secondaryImage: "/blog/storefront-door-repair-nyc-retail-secondary.png",
-    secondaryAlt: "Technician adjusting floor closer on a commercial glass entrance door",
+    secondaryAlt: "Technician repairing a commercial storefront door hinge in an East Village retail establishment.",
     body: `
 Ground-floor retail and restaurant spaces across NYC depend on aluminum and glass storefront doors that handle thousands of cycles per month. When a storefront door drags, won't latch, or slams shut, the cause is usually hardware wear — not necessarily the glass or frame.
 
@@ -134,17 +134,17 @@ East Village Door Supplier and Door Repair provides storefront door repair and r
   },
   {
     slug: "interior-door-replacement-nyc-apartment",
-    title: "Interior Door Replacement in NYC Apartments: Scope and Timing",
-    metaTitle: "NYC Apartment Interior Door Replacement",
+    title: "Interior Door Replacement for East Village & Lower East Side Apartments",
+    metaTitle: "Upgrade Your NYC Apartment: Interior Door Replacement in Manhattan",
     excerpt:
-      " Hollow-core upgrades, noise reduction, and building coordination for apartment interior door projects in NYC.",
+      "Refreshing your East Village apartment often starts with upgrading interior doors, enhancing both aesthetics and functionality. Discover options ranging from space-saving solutions for walk-ups to sound-dampening designs.",
     category: "Residential",
     readMinutes: 5,
     date: "2026-03-22",
     heroImage: "/blog/interior-door-replacement-nyc-apartment-hero.png",
-    heroAlt: "New interior door installed in a renovated NYC apartment",
+    heroAlt: "Bright, modern interior door in a renovated East Village apartment hallway.",
     secondaryImage: "/blog/interior-door-replacement-nyc-apartment-secondary.png",
-    secondaryAlt: "Stack of pre-hung interior doors ready for apartment installation",
+    secondaryAlt: "A craftsman measuring an interior door frame in a pre-war Lower East Side apartment.",
     body: `
 Renovating an NYC apartment often includes replacing dated hollow-core doors with solid-core or fire-rated slabs. Whether you are updating one bedroom door or standardizing an entire unit, scope and timing depend on frame condition, building rules, and hardware compatibility.
 
@@ -173,17 +173,17 @@ East Village Door Supplier and Door Repair installs interior doors across Manhat
   },
   {
     slug: "door-hardware-guide-nyc-buildings",
-    title: "Door Hardware Guide for NYC Buildings: Locks, Closers, and Hinges",
-    metaTitle: "NYC Door Hardware Selection Guide",
+    title: "Essential Door Hardware for East Village & Manhattan Buildings",
+    metaTitle: "NYC Door Hardware Guide: Security, Durability, & Code Compliance",
     excerpt:
-      "How to specify locksets, closers, hinges, and panic hardware for residential and commercial doors in NYC.",
+      "The right door hardware is vital for security, accessibility, and longevity in East Village and Manhattan buildings, especially considering high traffic and NYC code requirements. This guide covers everything from locks to closers.",
     category: "Hardware",
     readMinutes: 7,
     date: "2026-04-10",
     heroImage: "/blog/door-hardware-guide-nyc-buildings-hero.png",
-    heroAlt: "Commercial-grade door hardware including lockset and closer on a NYC office door",
+    heroAlt: "Assortment of high-security door locks, handles, and hinges on a display board.",
     secondaryImage: "/blog/door-hardware-guide-nyc-buildings-secondary.png",
-    secondaryAlt: "Assortment of hinges and locksets for door hardware upgrade",
+    secondaryAlt: "Close-up of a heavy-duty door closer installed on a commercial door in an NYC building.",
     body: `
 Door hardware determines how a door feels every day — and whether it meets code. NYC buildings mix residential locksets, commercial closers, panic hardware, and access-control components. Specifying the wrong hardware leads to premature failure, ADA issues, or security gaps.
 
@@ -210,17 +210,17 @@ East Village Door Supplier and Door Repair supplies and installs commercial and 
   },
   {
     slug: "structural-door-repair-vs-replacement",
-    title: "Structural Door Repair vs. Replacement: When to Fix the Frame",
-    metaTitle: "Door Frame Repair vs Replacement NYC",
+    title: "Structural Door Repair vs. Full Replacement in NYC Walk-ups",
+    metaTitle: "East Village Door Repair: When to Fix vs. Replace in NYC",
     excerpt:
-      "Sagging jambs, split stiles, and misaligned strikes — how to decide between structural repair and full door replacement.",
+      "Deciding between repairing a structurally compromised door or opting for a full replacement is a common dilemma in East Village walk-ups. We examine factors like cost, damage extent, and NYC building codes to help you make the best choice.",
     category: "Repair",
     readMinutes: 6,
     date: "2026-04-28",
     heroImage: "/blog/structural-door-repair-vs-replacement-hero.png",
-    heroAlt: "Technician repairing a damaged door jamb in a NYC building",
+    heroAlt: "A weathered, historic wooden door in an East Village walk-up apartment building, showing signs of wear.",
     secondaryImage: "/blog/structural-door-repair-vs-replacement-secondary.png",
-    secondaryAlt: "Before and after of a realigned door frame and hardware",
+    secondaryAlt: "Construction worker inspecting a damaged door frame in an old Manhattan building.",
     body: `
 Not every sticking door needs a new slab. Many NYC buildings — especially pre-war masonry structures — develop frame movement, rot, and hardware wear that mimic door failure. Structural assessment before ordering a replacement saves money and preserves original materials when possible.
 

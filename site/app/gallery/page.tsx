@@ -45,17 +45,17 @@ export default function GalleryPage() {
 
   return (
     <>
-      <section className="border-b border-cream-300 bg-aurora py-16">
+      <section className="border-b border-stone-300 bg-aurora py-16">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">Gallery</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">Gallery</p>
           <h1 className="mt-2 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
             NYC <span className="text-accent-gradient">door inspiration</span>.
           </h1>
-          <p className="mt-4 max-w-2xl text-cream-700">
+          <p className="mt-4 max-w-2xl text-stone-700">
             Visual references for the kind of residential, commercial, custom, fire-rated, storefront, and repair work
             we perform.
           </p>
-          <p className="mt-2 max-w-2xl text-sm text-cream-500">
+          <p className="mt-2 max-w-2xl text-sm text-stone-500">
             Images are illustrative project inspiration and are not presented as completed customer projects.
           </p>
           <div className="mt-6">
@@ -66,8 +66,8 @@ export default function GalleryPage() {
 
       <GalleryClient groups={groups} />
 
-      <section className="border-t border-cream-300 py-16">
-        <div className="mx-auto max-w-3xl space-y-6 px-4 text-sm text-cream-700 md:px-6">
+      <section className="border-t border-stone-300 py-16">
+        <div className="mx-auto max-w-3xl space-y-6 px-4 text-sm text-stone-700 md:px-6">
           <div>
             <h2 className="font-display text-2xl font-bold text-white md:text-3xl">Using inspiration well</h2>
             <p className="mt-3">

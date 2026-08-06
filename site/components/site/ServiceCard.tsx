@@ -26,7 +26,7 @@ export function ServiceCard({
   return (
     <Link
       href={`/services/${slug}`}
-      className="group relative block overflow-hidden rounded-3xl border border-cream-300 bg-cream-50/60 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.8)] transition-all hover:-translate-y-1 hover:border-teal-500/60"
+      className="group relative block overflow-hidden rounded-sm border border-stone-300 bg-white shadow-card transition-all hover:-translate-y-0.5 hover:border-indigo-500/50 hover:shadow-lift"
     >
       {/* Photo */}
       <div className="relative aspect-[16/10] overflow-hidden">
@@ -37,32 +37,32 @@ export function ServiceCard({
           height={photoH}
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
           priority={priority}
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] saturate-[1.05] contrast-[1.03]"
         />
         {/* Bottom gradient for legibility */}
-        <div className="absolute inset-0 bg-gradient-to-t from-cream-100 via-cream-100/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/5" />
 
         {/* Logo watermark, top-left */}
-        <div className="absolute left-3 top-3 flex items-center gap-2 rounded-sm border border-teal-500/40 bg-cream-100/70 px-2.5 py-1.5 backdrop-blur">
+        <div className="absolute left-3 top-3 flex items-center gap-2 rounded-sm border border-white/25 bg-black/50 px-2.5 py-1.5 backdrop-blur-sm">
           <LogoMark className="h-5 w-5" />
-          <span className="text-[10px] font-bold uppercase tracking-wider text-teal-600">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-white/90">
             {BIZ.name}
           </span>
         </div>
 
         {/* Map / location pill, top-right */}
         {city && (
-          <div className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full border border-cream-300/60 bg-cream-100/70 px-2.5 py-1 backdrop-blur">
-            <MapPin className="h-3 w-3 text-teal-600" />
-            <span className="text-[10px] font-semibold text-cream-800">{city}</span>
+          <div className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-sm border border-white/20 bg-black/45 px-2.5 py-1 backdrop-blur-sm">
+            <MapPin className="h-3 w-3 text-indigo-300" />
+            <span className="text-[10px] font-semibold text-white/90">{city}</span>
           </div>
         )}
 
         {/* Title overlay, bottom */}
         <div className="absolute inset-x-0 bottom-0 p-5">
           <div className="flex items-center gap-2">
-            <Icon className={cn("h-5 w-5 text-teal-600")} />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-teal-600">
+            <Icon className={cn("h-5 w-5 text-indigo-600")} />
+            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-indigo-600">
               {shortName}
             </span>
           </div>
@@ -74,8 +74,8 @@ export function ServiceCard({
 
       {/* Footer */}
       <div className="flex items-center justify-between gap-3 p-5">
-        <p className="text-sm text-cream-600">{tagline}</p>
-        <ArrowUpRight className="h-5 w-5 shrink-0 text-cream-900 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal-600" />
+        <p className="text-sm text-stone-600">{tagline}</p>
+        <ArrowUpRight className="h-5 w-5 shrink-0 text-stone-900 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-indigo-600" />
       </div>
     </Link>
   );

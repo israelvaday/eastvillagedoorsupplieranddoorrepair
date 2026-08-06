@@ -26,60 +26,60 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const BUSINESS_NAME = "East Village Door Supplier and Door Repair";
 const PHONE = "(212) 505-8847";
 const PHOTO_STYLE =
-  "Photorealistic professional door installation photographed on a full-frame camera, authentic NYC East Village or Manhattan property, realistic materials and hardware, natural New York light, balanced editorial composition";
+  "Ultra photorealistic architectural photography, Sony A7R IV 35mm lens, accurate wood grain and metal hardware textures, East Village or Lower East Side Manhattan NYC interior or street-level entry, crisp natural window light, professional real estate photography, realistic proportions, no CGI look";
 const NO_TEXT =
-  "No visible words, letters, labels, signs, logos, watermarks, captions, UI, or artificial CGI styling";
+  "No visible words, letters, numbers, street signs, store signs, logos, watermarks, captions, UI overlays, or artificial render artifacts";
 
 const SERVICE_HEROES = [
   {
     slug: "residential-door-installation",
     prompt:
-      "Professional door installer fitting a premium solid wood entry door in a Brooklyn brownstone, precise hinge alignment and clean job site",
+      "Installer fitting a premium solid oak entry door in a pre-war East Village walk-up apartment, clean casing and satin nickel hardware, tidy job site",
   },
   {
     slug: "commercial-door-installation",
     prompt:
-      "Professional crew installing a commercial hollow metal door in a modern NYC office corridor, organized tools and level frame",
+      "Two technicians installing a commercial hollow metal door in a bright Manhattan office corridor, level frame and organized tools",
   },
   {
     slug: "custom-door-fabrication",
     prompt:
-      "Craftsman finishing a custom panel entry door in a workshop, rich wood grain and precision mortise hardware prep",
+      "Craftsman hand-sanding a custom panel wood door in a small NYC workshop, visible grain and mortise lock prep, warm task lighting",
   },
   {
     slug: "door-hardware-supply",
     prompt:
-      "Close professional detail of commercial-grade lockset, hinges, and door closer arranged beside an installed NYC office door",
+      "Macro photo of premium brushed nickel lockset, heavy hinges, and door closer on a newly installed Manhattan apartment door",
   },
   {
     slug: "structural-door-repair",
     prompt:
-      "Professional technician rebuilding a damaged door jamb in a pre-war NYC apartment, shims and level visible",
+      "Technician shimming and squaring a damaged door jamb in a Lower East Side pre-war apartment, level and wood shims visible",
   },
   {
     slug: "fire-rated-doors",
     prompt:
-      "UL-labeled fire-rated corridor door installed in a NYC apartment building hallway with self-closing hardware",
+      "Fire-rated corridor door with metal label and self-closing hardware in a NYC apartment building hallway, realistic institutional finish",
   },
   {
     slug: "storefront-glass-doors",
     prompt:
-      "Aluminum and glass storefront entrance door on a NYC retail shop, clean floor closer and polished hardware",
+      "Aluminum and glass storefront entrance on an East Village retail shop, polished pull hardware and clean threshold",
   },
   {
     slug: "emergency-door-repair",
     prompt:
-      "Emergency door technician securing a damaged entry door after break-in on a Brooklyn building, professional tools",
+      "Emergency technician reinforcing a damaged entry door frame in a Manhattan building at night, portable work lights, professional tools",
   },
   {
     slug: "door-frame-jamb-repair",
     prompt:
-      "Professional carpenter replacing a rotted door jamb in a NYC masonry opening, new casing and square frame",
+      "Carpenter replacing a rotted pine door jamb in a NYC brick opening, new casing and square frame, realistic construction detail",
   },
   {
     slug: "security-access-doors",
     prompt:
-      "Reinforced security entry door with multi-point lock installed on a NYC multifamily lobby entrance",
+      "Reinforced steel security entry door with multi-point lock in a Manhattan multifamily lobby, clean modern hardware",
   },
 ];
 
@@ -119,59 +119,59 @@ const BLOG_IMAGES = [
 const GALLERY_IMAGES = [
   {
     file: "door-gallery--brooklyn-entry.png",
-    prompt: "Premium entry door installation on a Brooklyn townhouse with brass hardware and clean casing",
+    prompt: "Premium walnut entry door with sidelite installed on an East Village Manhattan townhouse stoop, brass hardware",
   },
   {
     file: "door-gallery--commercial-corridor.png",
-    prompt: "Commercial hollow metal doors installed in a bright NYC office corridor",
+    prompt: "Pair of commercial hollow metal doors in a sunlit Midtown Manhattan office corridor",
   },
   {
     file: "door-gallery--custom-wood-door.png",
-    prompt: "Custom solid wood panel door with rich stain finish in a NYC residential entry",
+    prompt: "Custom six-panel stained wood door in a Greenwich Village apartment entry with white trim",
   },
   {
     file: "door-gallery--storefront-glass.png",
-    prompt: "Aluminum storefront glass entrance doors on a NYC ground-floor retail space",
+    prompt: "Ground-floor aluminum glass storefront doors on a Lower East Side retail space",
   },
   {
     file: "door-gallery--fire-rated-hallway.png",
-    prompt: "Fire-rated apartment corridor doors with closers in a NYC multifamily building",
+    prompt: "Fire-rated apartment corridor doors with closers in a Manhattan multifamily building",
   },
   {
     file: "door-gallery--interior-slabs.png",
-    prompt: "Professional installation of white solid-core interior doors in a renovated NYC apartment",
+    prompt: "Freshly installed white solid-core interior doors in a renovated East Village apartment",
   },
   {
     file: "door-gallery--hardware-detail.png",
-    prompt: "Close detail of premium door hardware including lockset, hinges, and closer on installed door",
+    prompt: "Close-up of premium door hardware: lever lockset, ball bearing hinges, and hydraulic closer",
   },
   {
     file: "door-gallery--jamb-repair.png",
-    prompt: "Door frame jamb repair in progress on a pre-war NYC masonry opening",
+    prompt: "Door jamb rebuild in progress on a pre-war Manhattan masonry opening with new pine stock",
   },
   {
     file: "door-gallery--security-entry.png",
-    prompt: "Reinforced security entry door with multi-point lock on a NYC building lobby",
+    prompt: "Reinforced security entry door with electronic lock in a NYC apartment lobby",
   },
   {
     file: "door-gallery--warehouse-supply.png",
-    prompt: "Organized door supply warehouse with stacked door slabs and hardware racks, professional lighting",
+    prompt: "Clean door supply showroom with stacked slabs, hardware bins, and samples under bright lighting",
   },
   {
     file: "door-gallery--double-entry.png",
-    prompt: "Double entry door installation on a Brooklyn commercial building with ADA hardware",
+    prompt: "Double commercial entry doors with ADA hardware on a Manhattan mixed-use building",
   },
   {
     file: "door-gallery--apartment-interior.png",
-    prompt: "Interior door replacement in a NYC apartment hallway with multiple new pre-hung doors",
+    prompt: "Hallway with multiple new pre-hung interior doors in a NYC apartment renovation",
   },
   {
     file: "door-gallery--emergency-repair.png",
-    prompt: "Emergency door repair technician securing a damaged storefront door in NYC after hours",
+    prompt: "Technician repairing a damaged storefront door after hours on an NYC retail block",
   },
   {
     file: "door-gallery--historic-restoration.png",
-    prompt: "Historic door profile restoration on a Brooklyn brownstone with matching original casing",
+    prompt: "Historic wood door profile restoration on an East Village tenement with matching casing",
   },
 ];
 
@@ -204,19 +204,19 @@ const BRAND_IMAGES = [
     logo: true,
     aspectRatio: "1:1",
     prompt:
-      "Professional teal and coral vector logo for East Village Door Supplier, centered stylized door panel with subtle EV monogram, premium geometric mark for NYC door company, strong contrast, plain background, no extra words, no watermark",
+      "Minimal vector logo mark for East Village Door Supplier, stylized door silhouette with subtle EV letterforms, teal #0D6E6E and warm coral #E07A5F on cream #F8F6F3 background, crisp edges, premium trade mark, no text words",
   },
   {
     path: "public/photos/branding-generated--hero-east-village-door-nyc.png",
     aspectRatio: "16:9",
     prompt:
-      "Wide cinematic website hero of a professional door installer fitting a premium entry door in an East Village Manhattan walk-up, organized job site, open composition for page overlay",
+      "Wide hero photograph of a craftsman installing a premium wood entry door inside a bright East Village Manhattan apartment, full door visible, natural window light, editorial composition with negative space on left",
   },
   {
     path: "public/photos/branding-generated--nyc-service-map.png",
     aspectRatio: "16:9",
     prompt:
-      "Photorealistic tabletop service-area map visual showing Manhattan and Brooklyn through unlabeled teal and coral location markers, door hardware samples nearby",
+      "Elegant tabletop flat lay of Manhattan and Brooklyn map outline with teal pin markers and door hardware samples, soft studio lighting, no readable map labels",
   },
   {
     path: "public/about/about-hero.png",
@@ -257,7 +257,7 @@ async function generateAsset(key, imageModel, job, force) {
   const buffer = await generateImage(key, prompt, {
     model: imageModel,
     aspect_ratio: job.aspectRatio ?? "16:9",
-    resolution: job.resolution ?? "1K",
+    resolution: job.resolution ?? "2K",
     quality: job.quality ?? "high",
   });
   writeBuffer(outPath, buffer);

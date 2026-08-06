@@ -22,13 +22,13 @@ export default function HoursPage() {
     <section className="relative overflow-hidden bg-aurora py-24">
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="relative mx-auto max-w-5xl px-4 text-center md:px-6">
-        <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/40 bg-teal-500/10 px-4 py-2 text-sm font-semibold text-teal-600">
+        <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/40 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-600">
           <Clock className="h-4 w-4" /> Posted business hours
         </div>
         <h1 className="mt-6 font-display text-5xl font-extrabold tracking-tight md:text-7xl">
           Painting project <span className="text-accent-gradient">hours</span>
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-cream-700">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-stone-700">
           Contact {BIZ.name} during the schedule below. Quote requests received outside these hours can be reviewed
           during business hours.
         </p>
@@ -41,11 +41,11 @@ export default function HoursPage() {
                 key={entry.day}
                 className={`rounded-sm border px-3 py-4 text-center ${
                   isClosed
-                    ? "border-cream-300 bg-cream-50/60"
+                    ? "border-stone-300 bg-stone-50/60"
                     : "border-emerald-500/30 bg-emerald-500/5"
                 }`}
               >
-                <p className={`text-xs font-semibold uppercase tracking-wider ${isClosed ? "text-cream-500" : "text-emerald-300"}`}>
+                <p className={`text-xs font-semibold uppercase tracking-wider ${isClosed ? "text-stone-500" : "text-emerald-300"}`}>
                   {entry.label}
                 </p>
                 <p className="mt-2 font-mono text-sm font-bold text-white">

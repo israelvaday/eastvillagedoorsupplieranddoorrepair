@@ -19,7 +19,7 @@ export default function ThankYouPage() {
         <h1 className="mt-4 font-display text-4xl font-extrabold tracking-tight md:text-5xl">
           Got it — we&apos;ll be in touch.
         </h1>
-        <p className="mx-auto mt-4 max-w-md text-cream-700">
+        <p className="mx-auto mt-4 max-w-md text-stone-700">
           We received your door quote request. {BIZ.name} will review the project details and follow up using the
           contact information you provided.
         </p>

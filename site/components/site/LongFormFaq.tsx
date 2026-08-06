@@ -7,16 +7,16 @@ import { BIZ } from "@/lib/business";
 function CollapsibleQ({ q, children }: { q: string; children: ReactNode }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="overflow-hidden rounded-sm border border-cream-300 bg-cream-50/40">
+    <div className="overflow-hidden rounded-sm border border-stone-300 bg-stone-50/40">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-cream-50/60 md:px-6"
+        className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-stone-50/60 md:px-6"
       >
         <span className="font-display text-base font-bold text-white md:text-lg">{q}</span>
         <ChevronDown
-          className={`h-5 w-5 shrink-0 text-teal-600 transition-transform ${open ? "rotate-180" : ""}`}
+          className={`h-5 w-5 shrink-0 text-indigo-600 transition-transform ${open ? "rotate-180" : ""}`}
         />
       </button>
       <div
@@ -25,7 +25,7 @@ function CollapsibleQ({ q, children }: { q: string; children: ReactNode }) {
         }`}
       >
         <div className="overflow-hidden">
-          <div className="space-y-3 px-5 pb-5 text-cream-700 md:px-6 md:text-base">{children}</div>
+          <div className="space-y-3 px-5 pb-5 text-stone-700 md:px-6 md:text-base">{children}</div>
         </div>
       </div>
     </div>
@@ -38,14 +38,14 @@ export function LongFormFaq({ subject, kind }: { subject: string; kind: "area" |
     kind === "area" ? `door work in ${subject}` : `${subject.toLowerCase()} across NYC`;
 
   return (
-    <section className="border-t border-cream-300 py-16">
+    <section className="border-t border-stone-300 py-16">
       <div className="mx-auto max-w-3xl space-y-4 px-4 md:px-6">
         <header className="mb-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-teal-600">In depth</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-indigo-600">In depth</p>
           <h2 className="mt-2 font-display text-2xl font-bold text-white md:text-3xl">
             Questions about {topic}
           </h2>
-          <p className="mt-3 text-sm text-cream-700 md:text-base">
+          <p className="mt-3 text-sm text-stone-700 md:text-base">
             Practical answers from {BIZ.name} to help you compare door scopes in {place}. Tap a question to expand.
           </p>
         </header>

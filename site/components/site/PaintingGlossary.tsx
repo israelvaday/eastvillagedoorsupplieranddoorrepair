@@ -2,14 +2,14 @@ import { BIZ } from "@/lib/business";
 
 export function PaintingGlossary() {
   return (
-    <section className="border-t border-cream-300 py-16">
-      <div className="mx-auto max-w-3xl space-y-5 px-4 text-sm text-cream-700 md:px-6 md:text-base">
+    <section className="border-t border-stone-300 py-16">
+      <div className="mx-auto max-w-3xl space-y-5 px-4 text-sm text-stone-700 md:px-6 md:text-base">
         <header>
-          <p className="text-xs font-semibold uppercase tracking-wider text-teal-600">Glossary</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-indigo-600">Glossary</p>
           <h2 className="mt-2 font-display text-2xl font-bold text-white md:text-3xl">
             Door terms, explained in plain language
           </h2>
-          <p className="mt-3 text-cream-600">
+          <p className="mt-3 text-stone-600">
             These are the terms {BIZ.name} uses when discussing scope, hardware, and installation expectations.
           </p>
         </header>

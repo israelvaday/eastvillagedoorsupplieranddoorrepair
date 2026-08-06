@@ -19,11 +19,11 @@ export default function ServicesPage() {
       <section className="relative bg-aurora py-20">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative mx-auto max-w-5xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">Services</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">Services</p>
           <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
             Door services across <span className="text-accent-gradient">Brooklyn & NYC</span>.
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-cream-700">
+          <p className="mx-auto mt-5 max-w-2xl text-stone-700">
             Explore ten service lines with supply, installation, repair, hardware, and code-compliance details for
             homes, businesses, and multifamily buildings.
           </p>

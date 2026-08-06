@@ -18,11 +18,11 @@ export default function AreasPage() {
       <section className="relative bg-aurora py-20">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative mx-auto max-w-5xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">Service Areas</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">Service Areas</p>
           <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
             Every corner of <span className="text-accent-gradient">Manhattan & Brooklyn</span>.
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-cream-700">
+          <p className="mx-auto mt-5 max-w-2xl text-stone-700">
             We cover {AREAS.length} neighborhoods and communities — from {CITIES[0]?.name} to {CITIES[CITIES.length - 1]?.name}.
           </p>
         </div>

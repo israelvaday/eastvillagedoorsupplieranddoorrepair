@@ -2,7 +2,7 @@
 export const BIZ = {
   name: "East Village Door Supplier and Door Repair",
   legalName: "East Village Door Supplier and Door Repair",
-  tagline: "Premium Door Supply, Installation & Structural Repair — East Village & NYC",
+  tagline: "Your Trusted Partner for Door Sales, Installation, and Repair in NYC.",
   phone: "(212) 505-8847",
   phoneE164: "+12125058847",
   phoneHref: "tel:+12125058847",

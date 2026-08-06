@@ -3,12 +3,12 @@ import { BIZ } from "@/lib/business";
 
 export function MobileDock() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-cream-300 bg-cream-50/95 backdrop-blur md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-stone-300 bg-stone-50/95 backdrop-blur md:hidden">
       <div className="mx-auto grid max-w-md grid-cols-3">
         <a
           href={BIZ.phoneHref}
           aria-label={`Call ${BIZ.name}`}
-          className="flex flex-col items-center gap-1 py-3 text-xs font-semibold text-teal-600"
+          className="flex flex-col items-center gap-1 py-3 text-xs font-semibold text-indigo-600"
         >
           <Phone className="h-5 w-5" />
           Call
@@ -24,7 +24,7 @@ export function MobileDock() {
         <a
           href="/quote"
           aria-label="Get a free quote"
-          className="flex flex-col items-center gap-1 py-3 text-xs font-semibold text-cream-800"
+          className="flex flex-col items-center gap-1 py-3 text-xs font-semibold text-stone-800"
         >
           <ClipboardList className="h-5 w-5" />
           Free Quote

@@ -2,14 +2,14 @@ import { BIZ } from "@/lib/business";
 
 export function BuyersGuide() {
   return (
-    <section className="border-t border-cream-300 py-16">
-      <div className="mx-auto max-w-3xl space-y-5 px-4 text-sm text-cream-700 md:px-6 md:text-base">
+    <section className="border-t border-stone-300 py-16">
+      <div className="mx-auto max-w-3xl space-y-5 px-4 text-sm text-stone-700 md:px-6 md:text-base">
         <header>
-          <p className="text-xs font-semibold uppercase tracking-wider text-teal-600">Buyer&apos;s guide</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-indigo-600">Buyer&apos;s guide</p>
           <h2 className="mt-2 font-display text-2xl font-bold text-white md:text-3xl">
             How to compare door estimates in NYC
           </h2>
-          <p className="mt-3 text-cream-600">
+          <p className="mt-3 text-stone-600">
             A useful door estimate identifies the slab, frame, hardware, code requirements, and exclusions. Use this
             checklist before approving a scope.
           </p>

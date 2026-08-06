@@ -11,13 +11,13 @@ export function PhotoMarquee() {
   }));
   const doubled = [...photos, ...photos];
   return (
-    <section className="relative overflow-hidden border-y border-cream-300 bg-cream-100 py-12">
+    <section className="relative overflow-hidden border-y border-stone-300 bg-white py-12">
       <div className="mx-auto mb-6 flex max-w-7xl flex-col items-center px-4 text-center md:px-6">
-        <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">Project inspiration</p>
+        <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">Project inspiration</p>
         <h2 className="mt-1 font-display text-2xl font-bold tracking-tight md:text-3xl">
           The kind of door work we perform for NYC properties.
         </h2>
-        <p className="mt-2 max-w-2xl text-sm text-cream-500">
+        <p className="mt-2 max-w-2xl text-sm text-stone-500">
           Inspiration imagery is illustrative and is not presented as completed customer projects.
         </p>
       </div>
@@ -26,7 +26,7 @@ export function PhotoMarquee() {
           {doubled.map((p, i) => (
             <div
               key={`${p.id}-${i}`}
-              className="relative h-44 w-64 shrink-0 overflow-hidden rounded-sm border border-cream-300 md:h-56 md:w-80"
+              className="relative h-44 w-64 shrink-0 overflow-hidden rounded-sm border border-stone-300 shadow-card md:h-56 md:w-80"
             >
               <Image
                 src={p.src}
@@ -35,13 +35,13 @@ export function PhotoMarquee() {
                 height={900}
                 sizes="(max-width: 768px) 256px, 320px"
                 draggable={false}
-                className="pointer-events-none h-full w-full select-none object-cover"
+                className="pointer-events-none h-full w-full select-none object-cover saturate-[1.05] contrast-[1.03]"
               />
             </div>
           ))}
         </div>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-cream-100 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-cream-100 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent" />
       </div>
     </section>
   );

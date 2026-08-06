@@ -16,11 +16,11 @@ export default function QuotePage() {
       <section className="relative bg-aurora py-14 md:py-20">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative mx-auto max-w-3xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">Free Quote</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">Free Quote</p>
           <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
             One question at a <span className="text-accent-gradient">time</span>.
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-cream-700">
+          <p className="mx-auto mt-4 max-w-xl text-stone-700">
             Choose the door service and property type, then share the opening, door type, hardware needs, and timing.
           </p>
           <div className="mt-6 flex justify-center">
@@ -35,8 +35,8 @@ export default function QuotePage() {
         </div>
       </section>
 
-      <section className="border-t border-cream-300 py-16">
-        <div className="mx-auto max-w-3xl space-y-6 px-4 text-sm text-cream-700 md:px-6">
+      <section className="border-t border-stone-300 py-16">
+        <div className="mx-auto max-w-3xl space-y-6 px-4 text-sm text-stone-700 md:px-6">
           <div>
             <h2 className="font-display text-2xl font-bold text-white md:text-3xl">How the quote works</h2>
             <p className="mt-3">

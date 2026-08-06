@@ -2,9 +2,6 @@ import Image from "next/image";
 import { cn } from "@/lib/cn";
 import { BIZ } from "@/lib/business";
 
-/**
- * East Village Door brand mark.
- */
 export function LogoMark({
   className,
   title = BIZ.name,
@@ -14,7 +11,7 @@ export function LogoMark({
   return (
     <span
       className={cn(
-        "relative block h-10 w-10 shrink-0 select-none overflow-hidden rounded-sm border border-teal-400/60 bg-cream-50 shadow-lg shadow-teal-500/20",
+        "relative block h-10 w-10 shrink-0 select-none overflow-hidden border-2 border-amber-500 bg-indigo-950 shadow-inset",
         className
       )}
     >
@@ -34,18 +31,19 @@ export function Logo({
   className,
   showWordmark = true,
   size = "md",
-}: { className?: string; showWordmark?: boolean; size?: "sm" | "md" | "lg" }) {
+  variant = "light",
+}: { className?: string; showWordmark?: boolean; size?: "sm" | "md" | "lg"; variant?: "light" | "dark" }) {
   const dim = size === "sm" ? "h-8 w-8" : size === "lg" ? "h-12 w-12" : "h-10 w-10";
   const text = size === "sm" ? "text-sm" : size === "lg" ? "text-xl" : "text-base";
-  const wordmark = "East Village Door";
+  const dark = variant === "dark";
   return (
     <span className={cn("inline-flex items-center gap-2.5", className)}>
       <LogoMark className={dim} />
       {showWordmark && (
-        <span className={cn("font-display font-extrabold tracking-tight leading-none flex flex-col", text)}>
-          <span>{wordmark}</span>
-          <span className="mt-1 text-[9px] font-semibold tracking-[0.25em] text-teal-600/80 uppercase">
-            East Village · NYC
+        <span className={cn("font-display font-bold tracking-tight leading-none flex flex-col", text)}>
+          <span className={dark ? "text-stone-50" : "text-indigo-900"}>East Village Door</span>
+          <span className={cn("mt-1 text-[9px] font-semibold tracking-[0.28em] uppercase", dark ? "text-amber-400" : "text-amber-600")}>
+            Supply · Repair · NYC
           </span>
         </span>
       )}

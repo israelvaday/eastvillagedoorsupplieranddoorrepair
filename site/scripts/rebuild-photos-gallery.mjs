@@ -28,7 +28,7 @@ const GALLERY = [
     file: "door-gallery--brooklyn-entry.png",
     category: "residential",
     services: ["residential-door-installation", "custom-door-fabrication"],
-    alt: "Premium entry door installation on a Brooklyn townhouse",
+    alt: "Premium entry door installation on an East Village Manhattan townhouse",
   },
   {
     file: "door-gallery--commercial-corridor.png",
@@ -88,7 +88,7 @@ const GALLERY = [
     file: "door-gallery--double-entry.png",
     category: "commercial",
     services: ["commercial-door-installation"],
-    alt: "Double entry door installation on a Brooklyn commercial building",
+    alt: "Double entry door installation on a Manhattan commercial building",
   },
   {
     file: "door-gallery--apartment-interior.png",
@@ -106,7 +106,7 @@ const GALLERY = [
     file: "door-gallery--historic-restoration.png",
     category: "custom",
     services: ["custom-door-fabrication", "structural-door-repair"],
-    alt: "Historic door profile restoration on a Brooklyn brownstone",
+    alt: "Historic door profile restoration on an East Village tenement",
   },
 ];
 
@@ -152,7 +152,7 @@ const expectedAssets = [
   {
     id: "logo-master-on-navy",
     src: "/logo.png",
-    alt: `${BUSINESS_NAME} navy and gold HD door logo`,
+    alt: `${BUSINESS_NAME} teal and coral door logo`,
     category: "brand",
     kind: "brand",
     services: ["brand"],
@@ -176,7 +176,7 @@ const expectedAssets = [
   {
     id: "branding-hero-nyc",
     src: "/photos/branding-generated--hero-east-village-door-nyc.png",
-    alt: `${BUSINESS_NAME} professional door installation in Brooklyn`,
+    alt: `${BUSINESS_NAME} professional door installation in Manhattan`,
     category: "branding-generated",
     kind: "hero",
     services: SERVICES.map(({ slug }) => slug),

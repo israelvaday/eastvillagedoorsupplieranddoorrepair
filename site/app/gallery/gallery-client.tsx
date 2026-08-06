@@ -15,7 +15,7 @@ export function GalleryClient({ groups }: { groups: Group[] }) {
 
   return (
     <>
-      <div className="sticky top-[64px] z-30 border-b border-cream-300 bg-cream-100/80 backdrop-blur">
+      <div className="sticky top-[64px] z-30 border-b border-stone-300 bg-stone-100/80 backdrop-blur">
         <div className="mx-auto max-w-7xl overflow-x-auto px-4 md:px-6">
           <div className="flex gap-2 py-3">
             {groups.map((g) => (
@@ -25,12 +25,12 @@ export function GalleryClient({ groups }: { groups: Group[] }) {
                 className={cn(
                   "shrink-0 rounded-full border px-4 py-1.5 text-sm font-semibold transition-all",
                   active === g.key
-                    ? "border-teal-500/60 bg-teal-500/15 text-teal-600"
-                    : "border-cream-300 bg-cream-50/50 text-cream-600 hover:border-cream-400 hover:text-cream-800"
+                    ? "border-indigo-500/60 bg-indigo-500/15 text-indigo-600"
+                    : "border-stone-300 bg-stone-50/50 text-stone-600 hover:border-stone-400 hover:text-stone-800"
                 )}
               >
                 {g.label}
-                <span className="ml-1.5 text-xs text-cream-900">{g.photos.length}</span>
+                <span className="ml-1.5 text-xs text-stone-900">{g.photos.length}</span>
               </button>
             ))}
           </div>
@@ -47,7 +47,7 @@ export function GalleryClient({ groups }: { groups: Group[] }) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="mb-3 block w-full overflow-hidden rounded-sm border border-cream-300 bg-cream-50/40 outline-none transition-all hover:border-teal-500/40 focus-visible:border-teal-500/60"
+                className="mb-3 block w-full overflow-hidden rounded-sm border border-stone-300 bg-stone-50/40 outline-none transition-all hover:border-indigo-500/40 focus-visible:border-indigo-500/60"
               >
                 <Image
                   src={p.src}
@@ -69,13 +69,13 @@ export function GalleryClient({ groups }: { groups: Group[] }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-cream-100/95 p-4 backdrop-blur-md"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-stone-100/95 p-4 backdrop-blur-md"
             onClick={() => setLightbox(null)}
           >
             <button
               aria-label="Close"
               onClick={() => setLightbox(null)}
-              className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full border border-cream-300 bg-cream-50 text-cream-800 hover:bg-cream-200"
+              className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full border border-stone-300 bg-stone-50 text-stone-800 hover:bg-stone-200"
             >
               <X className="h-5 w-5" />
             </button>
@@ -94,7 +94,7 @@ export function GalleryClient({ groups }: { groups: Group[] }) {
                 sizes="100vw"
                 className="max-h-[88vh] w-auto rounded-sm object-contain"
               />
-              <p className="mt-3 text-center text-sm text-cream-600">{lightbox.alt}</p>
+              <p className="mt-3 text-center text-sm text-stone-600">{lightbox.alt}</p>
             </motion.div>
           </motion.div>
         )}

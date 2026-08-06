@@ -24,10 +24,10 @@ export function ServiceMap({
       ? `https://maps.google.com/maps?q=${lat},${lng}&z=${zoom}&t=m&ie=UTF8&iwloc=&output=embed`
       : `https://www.google.com/maps?q=${encodeURIComponent(query ?? "")}&output=embed`;
   return (
-    <div className={`overflow-hidden rounded-3xl border border-cream-300 bg-cream-50/50 ${className ?? ""}`}>
-      <div className="flex items-center justify-between gap-2 border-b border-cream-300 px-4 py-2.5">
-        <div className="flex items-center gap-2 text-sm font-semibold text-cream-800">
-          <MapPin className="h-4 w-4 text-teal-600" />
+    <div className={`overflow-hidden rounded-3xl border border-stone-300 bg-stone-50/50 ${className ?? ""}`}>
+      <div className="flex items-center justify-between gap-2 border-b border-stone-300 px-4 py-2.5">
+        <div className="flex items-center gap-2 text-sm font-semibold text-stone-800">
+          <MapPin className="h-4 w-4 text-indigo-600" />
           {title ?? "Service area map"}
         </div>
         <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400">

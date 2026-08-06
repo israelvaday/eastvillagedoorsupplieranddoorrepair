@@ -46,7 +46,7 @@ export function AvailabilityChecker({ service }: { service?: AvailabilityService
   }
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-teal-500/30 bg-gradient-to-br from-cream-200 via-cream-100 to-cream-200 p-5 shadow-2xl shadow-black/40 md:p-7">
+    <div className="relative overflow-hidden rounded-3xl border border-indigo-500/30 bg-gradient-to-br from-stone-200 via-stone-100 to-stone-200 p-5 shadow-2xl shadow-black/40 md:p-7">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -58,7 +58,7 @@ export function AvailabilityChecker({ service }: { service?: AvailabilityService
       />
 
       <div className="relative flex flex-wrap items-center gap-3">
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-teal-500/40 bg-teal-500/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-teal-600">
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-indigo-500/40 bg-indigo-500/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-indigo-600">
           <MapPin className="h-3 w-3" />
           NYC service check
         </span>
@@ -67,7 +67,7 @@ export function AvailabilityChecker({ service }: { service?: AvailabilityService
       <h2 className="relative mt-4 font-display text-2xl font-extrabold tracking-tight md:text-3xl">
         Is your {serviceLabel.toLowerCase()} project in our service area?
       </h2>
-      <p className="relative mt-2 text-sm text-cream-600 md:text-base">
+      <p className="relative mt-2 text-sm text-stone-600 md:text-base">
         Location access only checks whether you appear to be within our Manhattan &amp; Brooklyn coverage bounds.
         It does not promise project availability, a start date, or an arrival time.
       </p>
@@ -79,7 +79,7 @@ export function AvailabilityChecker({ service }: { service?: AvailabilityService
               <div className="flex items-center gap-2 text-sm font-bold text-amber-300">
                 <AlertTriangle className="h-4 w-4" /> Location was unavailable
               </div>
-              <p className="mt-1 text-xs text-cream-600">
+              <p className="mt-1 text-xs text-stone-600">
                 You can still request a quote with your neighborhood or ZIP, or call to confirm coverage.
               </p>
             </div>
@@ -87,7 +87,7 @@ export function AvailabilityChecker({ service }: { service?: AvailabilityService
           <button
             type="button"
             onClick={checkLocation}
-            className="inline-flex items-center gap-2 rounded-full bg-teal-500 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-teal-500/30 transition hover:bg-teal-400 active:translate-y-px md:text-base"
+            className="inline-flex items-center gap-2 rounded-full bg-indigo-500 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-indigo-500/30 transition hover:bg-indigo-400 active:translate-y-px md:text-base"
           >
             <Crosshair className="h-5 w-5" /> Check my service area
           </button>
@@ -95,7 +95,7 @@ export function AvailabilityChecker({ service }: { service?: AvailabilityService
       )}
 
       {phase === "locating" && (
-        <div className="relative mt-5 flex items-center gap-2 text-sm font-semibold text-teal-600">
+        <div className="relative mt-5 flex items-center gap-2 text-sm font-semibold text-indigo-600">
           <Loader2 className="h-4 w-4 animate-spin" /> Checking your position against NYC coverage…
         </div>
       )}
@@ -105,7 +105,7 @@ export function AvailabilityChecker({ service }: { service?: AvailabilityService
           <div className="flex items-center gap-2 font-bold text-emerald-300">
             <CheckCircle2 className="h-5 w-5" /> You appear to be inside our NYC service area
           </div>
-          <p className="mt-2 text-sm text-cream-600">
+          <p className="mt-2 text-sm text-stone-600">
             Send the project address and scope so {BIZ.name} can confirm coverage and discuss scheduling.
           </p>
           <AvailabilityLinks />
@@ -117,7 +117,7 @@ export function AvailabilityChecker({ service }: { service?: AvailabilityService
           <div className="flex items-center gap-2 font-bold text-amber-300">
             <AlertTriangle className="h-5 w-5" /> You appear to be outside our standard NYC bounds
           </div>
-          <p className="mt-2 text-sm text-cream-600">
+          <p className="mt-2 text-sm text-stone-600">
             The location check is approximate. Call with the project address if you would like us to confirm coverage.
           </p>
           <AvailabilityLinks />
@@ -132,13 +132,13 @@ function AvailabilityLinks() {
     <div className="mt-4 flex flex-wrap gap-3">
       <Link
         href="/quote"
-        className="inline-flex items-center rounded-full bg-teal-500 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-teal-400"
+        className="inline-flex items-center rounded-full bg-indigo-500 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-indigo-400"
       >
         Request a project quote
       </Link>
       <a
         href={BIZ.phoneHref}
-        className="inline-flex items-center gap-2 rounded-full border border-teal-500/50 px-5 py-2.5 text-sm font-bold text-teal-600 transition hover:bg-teal-500/10"
+        className="inline-flex items-center gap-2 rounded-full border border-indigo-500/50 px-5 py-2.5 text-sm font-bold text-indigo-600 transition hover:bg-indigo-500/10"
       >
         <Phone className="h-4 w-4" /> Call {BIZ.phone}
       </a>

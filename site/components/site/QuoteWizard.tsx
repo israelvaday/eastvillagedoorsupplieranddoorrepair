@@ -175,22 +175,22 @@ export function QuoteWizard() {
   }
 
   return (
-    <div ref={rootRef} className="relative overflow-hidden rounded-3xl border border-teal-500/30 bg-gradient-to-br from-cream-200 via-cream-100 to-cream-200 p-5 pb-24 shadow-2xl shadow-black/40 md:p-8">
+    <div ref={rootRef} className="relative overflow-hidden rounded-3xl border border-indigo-500/30 bg-gradient-to-br from-stone-200 via-stone-100 to-stone-200 p-5 pb-24 shadow-2xl shadow-black/40 md:p-8">
       <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.06]"
         style={{ backgroundImage: "linear-gradient(rgba(201,162,74,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(201,162,74,.6) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
 
       <div className="relative flex flex-wrap items-center gap-3">
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-teal-500/40 bg-cream-100/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-teal-600">
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-indigo-500/40 bg-stone-100/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-indigo-600">
           <DoorOpen className="h-3 w-3" /> Door project quote
         </span>
-        <span className="text-[11px] font-bold uppercase tracking-wider text-cream-500">
+        <span className="text-[11px] font-bold uppercase tracking-wider text-stone-500">
           Step {step + 1} of {STEP_LABELS.length} — {STEP_LABELS[step]}
         </span>
-        <span className="ml-auto text-[11px] font-bold text-teal-600">{progress}%</span>
+        <span className="ml-auto text-[11px] font-bold text-indigo-600">{progress}%</span>
       </div>
-      <div className="relative mt-3 h-1.5 w-full overflow-hidden rounded-full bg-cream-200">
+      <div className="relative mt-3 h-1.5 w-full overflow-hidden rounded-full bg-stone-200">
         <motion.div
-          className="h-full rounded-full bg-gradient-to-r from-teal-600 via-teal-400 to-coral-400"
+          className="h-full rounded-full bg-gradient-to-r from-indigo-600 via-indigo-400 to-amber-400"
           initial={false}
           animate={{ width: `${progress}%` }}
           transition={{ duration: 0.45, ease: "easeOut" }}
@@ -209,16 +209,16 @@ export function QuoteWizard() {
             {step === 0 && (
               <>
                 <h2 className="font-display text-2xl font-extrabold md:text-3xl">What do you need?</h2>
-                <p className="mt-1 text-sm text-cream-600">Tap the picture closest to your job.</p>
+                <p className="mt-1 text-sm text-stone-600">Tap the picture closest to your job.</p>
                 <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {SERVICES.map((s) => (
                     <button
                       key={s.key}
                       type="button"
                       onClick={() => { setService(s.key); setTimeout(next, 150); }}
-                      className={`group relative overflow-hidden rounded-sm border text-left transition focus:outline-none ${service === s.key ? "border-teal-400 ring-2 ring-teal-500/40" : "border-cream-300 hover:border-teal-500/50"}`}
+                      className={`group relative overflow-hidden rounded-sm border text-left transition focus:outline-none ${service === s.key ? "border-indigo-400 ring-2 ring-indigo-500/40" : "border-stone-300 hover:border-indigo-500/50"}`}
                     >
-                      <div className="relative aspect-square w-full bg-cream-100">
+                      <div className="relative aspect-square w-full bg-stone-100">
                         <Image
                           src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/photos/quote/${s.key}.png`}
                           alt={s.label}
@@ -226,16 +226,16 @@ export function QuoteWizard() {
                           sizes="(max-width: 640px) 50vw, 33vw"
                           className="object-cover transition group-hover:scale-[1.03]"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-cream-100 via-cream-100/30 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                         {service === s.key && (
-                          <div className="absolute right-2 top-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-teal-500 text-white">
+                          <div className="absolute right-2 top-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-indigo-500 text-white">
                             <Check className="h-4 w-4" />
                           </div>
                         )}
                       </div>
                       <div className="px-3 py-2.5">
-                        <div className="font-display text-sm font-extrabold text-cream-900">{s.label}</div>
-                        <div className="text-[11px] text-cream-500">{s.sub}</div>
+                        <div className="font-display text-sm font-extrabold text-stone-900">{s.label}</div>
+                        <div className="text-[11px] text-stone-500">{s.sub}</div>
                       </div>
                     </button>
                   ))}
@@ -246,16 +246,16 @@ export function QuoteWizard() {
             {step === 1 && (
               <>
                 <h2 className="font-display text-2xl font-extrabold md:text-3xl">Where is it?</h2>
-                <p className="mt-1 text-sm text-cream-600">Pick the property type.</p>
+                <p className="mt-1 text-sm text-stone-600">Pick the property type.</p>
                 <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
                   {PROPERTIES.map((p) => (
                     <button
                       key={p.key}
                       type="button"
                       onClick={() => { setProperty(p.key); setTimeout(next, 150); }}
-                      className={`group relative overflow-hidden rounded-sm border text-left transition focus:outline-none ${property === p.key ? "border-teal-400 ring-2 ring-teal-500/40" : "border-cream-300 hover:border-teal-500/50"}`}
+                      className={`group relative overflow-hidden rounded-sm border text-left transition focus:outline-none ${property === p.key ? "border-indigo-400 ring-2 ring-indigo-500/40" : "border-stone-300 hover:border-indigo-500/50"}`}
                     >
-                      <div className="relative aspect-square w-full bg-cream-100">
+                      <div className="relative aspect-square w-full bg-stone-100">
                         <Image
                           src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/photos/quote/${p.key}.png`}
                           alt={p.label}
@@ -263,16 +263,16 @@ export function QuoteWizard() {
                           sizes="(max-width: 640px) 50vw, 25vw"
                           className="object-cover transition group-hover:scale-[1.03]"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-cream-100 via-cream-100/30 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                         {property === p.key && (
-                          <div className="absolute right-2 top-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-teal-500 text-white">
+                          <div className="absolute right-2 top-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-indigo-500 text-white">
                             <Check className="h-4 w-4" />
                           </div>
                         )}
                       </div>
                       <div className="px-3 py-2.5">
-                        <div className="font-display text-sm font-extrabold text-cream-900">{p.label}</div>
-                        <div className="text-[11px] text-cream-500">{p.sub}</div>
+                        <div className="font-display text-sm font-extrabold text-stone-900">{p.label}</div>
+                        <div className="text-[11px] text-stone-500">{p.sub}</div>
                       </div>
                     </button>
                   ))}
@@ -283,7 +283,7 @@ export function QuoteWizard() {
             {step === 2 && (
               <>
                 <h2 className="font-display text-2xl font-extrabold md:text-3xl">What is your timing?</h2>
-                <p className="mt-1 text-sm text-cream-600">This helps us understand your planning window.</p>
+                <p className="mt-1 text-sm text-stone-600">This helps us understand your planning window.</p>
                 <div className="mt-5 grid gap-3 sm:grid-cols-2">
                   {URGENCIES.map((u) => {
                     const Icon = u.Icon;
@@ -293,16 +293,16 @@ export function QuoteWizard() {
                         key={u.key}
                         type="button"
                         onClick={() => { setUrgency(u.key); setTimeout(next, 150); }}
-                        className={`flex items-start gap-3 rounded-sm border p-4 text-left transition ${active ? "border-teal-400 bg-teal-500/10 ring-2 ring-teal-500/40" : "border-cream-300 hover:border-teal-500/50"}`}
+                        className={`flex items-start gap-3 rounded-sm border p-4 text-left transition ${active ? "border-indigo-400 bg-indigo-500/10 ring-2 ring-indigo-500/40" : "border-stone-300 hover:border-indigo-500/50"}`}
                       >
-                        <span className={`mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-full ${active ? "bg-teal-500 text-white" : "bg-cream-200 text-teal-600"}`}>
+                        <span className={`mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-full ${active ? "bg-indigo-500 text-white" : "bg-stone-200 text-indigo-600"}`}>
                           <Icon className="h-5 w-5" />
                         </span>
                         <span>
-                          <span className="block font-display text-base font-extrabold text-cream-900">{u.label}</span>
-                          <span className="block text-xs text-cream-500" dangerouslySetInnerHTML={{ __html: u.sub }} />
+                          <span className="block font-display text-base font-extrabold text-stone-900">{u.label}</span>
+                          <span className="block text-xs text-stone-500" dangerouslySetInnerHTML={{ __html: u.sub }} />
                         </span>
-                        {active && <Check className="ml-auto h-5 w-5 text-teal-600" />}
+                        {active && <Check className="ml-auto h-5 w-5 text-indigo-600" />}
                       </button>
                     );
                   })}
@@ -313,12 +313,12 @@ export function QuoteWizard() {
             {step === 3 && (
               <>
                 <h2 className="font-display text-2xl font-extrabold md:text-3xl">Anything we should know?</h2>
-                <p className="mt-1 text-sm text-cream-600">Opening size, door type, hardware, condition, and access notes are helpful.</p>
+                <p className="mt-1 text-sm text-stone-600">Opening size, door type, hardware, condition, and access notes are helpful.</p>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows={6}
-                  className="mt-5 w-full rounded-sm border border-cream-300 bg-cream-100 p-4 outline-none focus:border-teal-500"
+                  className="mt-5 w-full rounded-sm border border-stone-300 bg-stone-100 p-4 outline-none focus:border-indigo-500"
                   placeholder="e.g. Replace a pre-war entry door in Park Slope — sagging jamb, need fire-rated hardware coordination."
                 />
               </>
@@ -327,13 +327,13 @@ export function QuoteWizard() {
             {step === 4 && (
               <>
                 <h2 className="font-display text-2xl font-extrabold md:text-3xl">Got a picture or document?</h2>
-                <p className="mt-1 text-sm text-cream-600">
+                <p className="mt-1 text-sm text-stone-600">
                   Upload wide shots and close-ups of the opening, existing door, damage, hardware, or plans. Optional (max {MAX_FILES} files, 8 MB each).
                 </p>
-                <label className="mt-5 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-sm border-2 border-dashed border-teal-500/40 bg-cream-100/50 p-8 text-center hover:border-teal-400">
-                  <Upload className="h-7 w-7 text-teal-600" />
-                  <span className="font-display text-base font-bold text-cream-900">Tap to upload</span>
-                  <span className="text-xs text-cream-500">JPG · PNG · WEBP · HEIC · PDF</span>
+                <label className="mt-5 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-sm border-2 border-dashed border-indigo-500/40 bg-stone-100/50 p-8 text-center hover:border-indigo-400">
+                  <Upload className="h-7 w-7 text-indigo-600" />
+                  <span className="font-display text-base font-bold text-stone-900">Tap to upload</span>
+                  <span className="text-xs text-stone-500">JPG · PNG · WEBP · HEIC · PDF</span>
                   <input
                     type="file"
                     accept={ACCEPT}
@@ -345,16 +345,16 @@ export function QuoteWizard() {
                 {files.length > 0 && (
                   <ul className="mt-4 space-y-2">
                     {files.map((f, i) => (
-                      <li key={i} className="flex items-center gap-3 rounded-sm border border-cream-300 bg-cream-100/70 p-2.5">
-                        <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-cream-200 text-teal-600">
+                      <li key={i} className="flex items-center gap-3 rounded-sm border border-stone-300 bg-stone-100/70 p-2.5">
+                        <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-stone-200 text-indigo-600">
                           {f.type.startsWith("image/") ? <ImageIcon className="h-4 w-4" /> : <FileText className="h-4 w-4" />}
                         </span>
                         <div className="min-w-0 flex-1">
-                          <div className="truncate text-sm font-semibold text-cream-800">{f.name}</div>
-                          <div className="text-[11px] text-cream-500">{(f.size / 1024).toFixed(0)} KB · {f.type || "file"}</div>
+                          <div className="truncate text-sm font-semibold text-stone-800">{f.name}</div>
+                          <div className="text-[11px] text-stone-500">{(f.size / 1024).toFixed(0)} KB · {f.type || "file"}</div>
                         </div>
                         <button type="button" onClick={() => removeFile(i)} aria-label="Remove file"
-                          className="inline-flex h-8 w-8 items-center justify-center rounded-full text-cream-500 hover:bg-cream-200 hover:text-cream-800">
+                          className="inline-flex h-8 w-8 items-center justify-center rounded-full text-stone-500 hover:bg-stone-200 hover:text-stone-800">
                           <X className="h-4 w-4" />
                         </button>
                       </li>
@@ -367,7 +367,7 @@ export function QuoteWizard() {
             {step === 5 && (
               <>
                 <h2 className="font-display text-2xl font-extrabold md:text-3xl">Where do we send the quote?</h2>
-                <p className="mt-1 text-sm text-cream-600">We&apos;ll use these details to follow up about your project.</p>
+                <p className="mt-1 text-sm text-stone-600">We&apos;ll use these details to follow up about your project.</p>
                 <div className="mt-5 grid gap-4 sm:grid-cols-2">
                   <Field label="Name" value={name} onChange={setName} required />
                   <Field label="Phone" value={phone} onChange={setPhone} required type="tel" />
@@ -375,13 +375,13 @@ export function QuoteWizard() {
                   <Field label="Neighborhood / ZIP" value={location} onChange={setLocation} required placeholder="Park Slope, 11215" />
                 </div>
 
-                <div className="mt-6 rounded-sm border border-cream-300 bg-cream-100/60 p-4">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-teal-600">Summary</div>
-                  <ul className="mt-2 grid gap-1 text-sm text-cream-700 sm:grid-cols-2">
-                    <li><span className="text-cream-500">Service:</span> {SERVICES.find((s) => s.key === service)?.label || "—"}</li>
-                    <li><span className="text-cream-500">Property:</span> {PROPERTIES.find((p) => p.key === property)?.label || "—"}</li>
-                    <li><span className="text-cream-500">Timing:</span> {URGENCIES.find((u) => u.key === urgency)?.label || "—"}</li>
-                    <li><span className="text-cream-500">Attachments:</span> {files.length}</li>
+                <div className="mt-6 rounded-sm border border-stone-300 bg-stone-100/60 p-4">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-indigo-600">Summary</div>
+                  <ul className="mt-2 grid gap-1 text-sm text-stone-700 sm:grid-cols-2">
+                    <li><span className="text-stone-500">Service:</span> {SERVICES.find((s) => s.key === service)?.label || "—"}</li>
+                    <li><span className="text-stone-500">Property:</span> {PROPERTIES.find((p) => p.key === property)?.label || "—"}</li>
+                    <li><span className="text-stone-500">Timing:</span> {URGENCIES.find((u) => u.key === urgency)?.label || "—"}</li>
+                    <li><span className="text-stone-500">Attachments:</span> {files.length}</li>
                   </ul>
                 </div>
               </>
@@ -427,12 +427,12 @@ export function QuoteWizard() {
         )}
         <a
           href={BIZ.phoneHref}
-          className="inline-flex items-center gap-2 rounded-full border border-cream-300 px-3 py-2 text-xs font-bold uppercase tracking-wider text-cream-600 hover:border-teal-500/50 hover:text-teal-600"
+          className="inline-flex items-center gap-2 rounded-full border border-stone-300 px-3 py-2 text-xs font-bold uppercase tracking-wider text-stone-600 hover:border-indigo-500/50 hover:text-indigo-600"
         >
           <Phone className="h-3.5 w-3.5" /> {BIZ.phone}
         </a>
       </div>
-      <p className="relative mt-3 text-[11px] text-cream-500">
+      <p className="relative mt-3 text-[11px] text-stone-500">
         By submitting, you agree we may text or call you about your request.
       </p>
     </div>
@@ -451,14 +451,14 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-sm font-semibold text-cream-800">{label}{required && <span className="text-teal-600"> *</span>}</span>
+      <span className="mb-1.5 block text-sm font-semibold text-stone-800">{label}{required && <span className="text-indigo-600"> *</span>}</span>
       <input
         type={type}
         value={value}
         required={required}
         placeholder={placeholder}
         onChange={(e) => onChange(e.target.value)}
-        className="h-12 w-full rounded-sm border border-cream-300 bg-cream-100 px-4 outline-none focus:border-teal-500"
+        className="h-12 w-full rounded-sm border border-stone-300 bg-stone-100 px-4 outline-none focus:border-indigo-500"
       />
     </label>
   );

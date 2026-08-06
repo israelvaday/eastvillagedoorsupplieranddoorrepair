@@ -60,7 +60,7 @@ function renderBody(body: string, secondaryImage: string, secondaryAlt: string) 
     if (paraBuffer.length) {
       const text = paraBuffer.join(" ");
       out.push(
-        <p key={`p-${out.length}`} className="my-5 text-cream-700 md:text-lg leading-relaxed">
+        <p key={`p-${out.length}`} className="my-5 text-stone-700 md:text-lg leading-relaxed">
           {renderInline(text)}
         </p>
       );
@@ -70,7 +70,7 @@ function renderBody(body: string, secondaryImage: string, secondaryAlt: string) 
   const flushList = () => {
     if (listBuffer && listBuffer.length) {
       out.push(
-        <ul key={`ul-${out.length}`} className="my-5 ml-5 list-disc space-y-1.5 text-cream-700 md:text-lg">
+        <ul key={`ul-${out.length}`} className="my-5 ml-5 list-disc space-y-1.5 text-stone-700 md:text-lg">
           {listBuffer.map((li, i) => (
             <li key={i}>{renderInline(li)}</li>
           ))}
@@ -94,7 +94,7 @@ function renderBody(body: string, secondaryImage: string, secondaryAlt: string) 
       // Drop the secondary image once, somewhere in the middle of the article
       if (h2Count === 3) {
         out.push(
-          <div key={`img-${out.length}`} className="my-8 overflow-hidden rounded-3xl border border-cream-300">
+          <div key={`img-${out.length}`} className="my-8 overflow-hidden rounded-3xl border border-stone-300">
             <Image
               src={secondaryImage}
               alt={secondaryAlt}
@@ -141,11 +141,11 @@ function renderInline(text: string): React.ReactNode {
     const isExternal = /^https?:\/\//.test(m[2]);
     parts.push(
       isExternal ? (
-        <a key={`a-${parts.length}`} href={m[2]} target="_blank" rel="noopener noreferrer" className="text-teal-600 underline-offset-4 hover:underline">
+        <a key={`a-${parts.length}`} href={m[2]} target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline-offset-4 hover:underline">
           {m[1]}
         </a>
       ) : (
-        <Link key={`a-${parts.length}`} href={m[2]} className="text-teal-600 underline-offset-4 hover:underline">
+        <Link key={`a-${parts.length}`} href={m[2]} className="text-indigo-600 underline-offset-4 hover:underline">
           {m[1]}
         </Link>
       )
@@ -196,24 +196,24 @@ export default async function BlogPostPage(
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-cream-100 via-cream-100/60 to-cream-100/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
           </div>
           <div className="relative z-10 -mt-32 md:-mt-44">
             <div className="mx-auto max-w-3xl px-4 md:px-6">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 hover:text-teal-500"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 hover:text-indigo-500"
               >
                 <ArrowLeft className="h-4 w-4" /> All articles
               </Link>
-              <span className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full border border-teal-500/40 bg-teal-500/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-teal-600">
+              <span className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full border border-indigo-500/40 bg-indigo-500/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-indigo-600">
                 {post.category}
               </span>
               <h1 className="mt-4 font-display text-3xl font-extrabold leading-tight tracking-tight md:text-5xl">
                 {post.title}
               </h1>
-              <p className="mt-4 text-lg text-cream-700 md:text-xl">{post.excerpt}</p>
-              <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-cream-500">
+              <p className="mt-4 text-lg text-stone-700 md:text-xl">{post.excerpt}</p>
+              <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-stone-500">
                 <span className="inline-flex items-center gap-1.5">
                   <Calendar className="h-4 w-4" /> {formatDate(post.date)}
                 </span>
@@ -221,7 +221,7 @@ export default async function BlogPostPage(
                   <Clock className="h-4 w-4" /> {post.readMinutes} min read
                 </span>
                 <span className="inline-flex items-center gap-1.5">
-                  <DoorOpen className="h-4 w-4 text-teal-600" /> NYC door guide
+                  <DoorOpen className="h-4 w-4 text-indigo-600" /> NYC door guide
                 </span>
               </div>
             </div>
@@ -230,18 +230,18 @@ export default async function BlogPostPage(
 
         {/* Body */}
         <div className="mx-auto max-w-3xl px-4 pt-10 pb-16 md:px-6 md:pt-14 md:pb-20">
-          <p className="mb-8 rounded-sm border border-cream-300 bg-cream-50/40 p-4 text-sm text-cream-500">
+          <p className="mb-8 rounded-sm border border-stone-300 bg-stone-50/40 p-4 text-sm text-stone-500">
             Article images are project inspiration and illustrate the kind of work discussed; they are not presented
             as completed customer projects.
           </p>
           {renderBody(post.body, post.secondaryImage, post.secondaryAlt)}
 
           {/* Inline CTA */}
-          <div className="mt-12 rounded-3xl border border-teal-500/30 bg-gradient-to-br from-teal-500/10 to-cream-200/40 p-6 text-center md:p-8">
+          <div className="mt-12 rounded-3xl border border-indigo-500/30 bg-gradient-to-br from-indigo-500/10 to-stone-200/40 p-6 text-center md:p-8">
             <h3 className="font-display text-xl font-extrabold md:text-2xl">
               Planning a door project in NYC?
             </h3>
-            <p className="mx-auto mt-2 max-w-xl text-sm text-cream-700 md:text-base">
+            <p className="mx-auto mt-2 max-w-xl text-sm text-stone-700 md:text-base">
               Share the property, opening, door type, hardware needs, and timing with {BIZ.name} for a project-specific
               follow-up across Manhattan &amp; Brooklyn.
             </p>
@@ -254,7 +254,7 @@ export default async function BlogPostPage(
 
       {/* Related */}
       {suggestions.length > 0 && (
-        <section className="border-t border-cream-300 bg-cream-100 py-16">
+        <section className="border-t border-stone-300 bg-stone-100 py-16">
           <div className="mx-auto max-w-7xl px-4 md:px-6">
             <h2 className="text-center font-display text-2xl font-bold tracking-tight md:text-3xl">
               Keep reading
@@ -264,17 +264,17 @@ export default async function BlogPostPage(
                 <Link
                   key={p.slug}
                   href={`/blog/${p.slug}`}
-                  className="group flex flex-col overflow-hidden rounded-sm border border-cream-300 bg-cream-50/40 transition hover:-translate-y-0.5 hover:border-teal-500/40"
+                  className="group flex flex-col overflow-hidden rounded-sm border border-stone-300 bg-stone-50/40 transition hover:-translate-y-0.5 hover:border-indigo-500/40"
                 >
                   <div className="relative aspect-[16/10]">
                     <Image src={p.heroImage} alt={p.heroAlt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                   </div>
                   <div className="flex flex-1 flex-col gap-2 p-5">
-                    <span className="inline-flex w-fit items-center rounded-full border border-cream-300 bg-cream-50/70 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-teal-600">
+                    <span className="inline-flex w-fit items-center rounded-full border border-stone-300 bg-stone-50/70 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-indigo-600">
                       {p.category}
                     </span>
                     <h3 className="font-display text-base font-extrabold leading-tight">{p.title}</h3>
-                    <p className="text-sm text-cream-600">{p.excerpt}</p>
+                    <p className="text-sm text-stone-600">{p.excerpt}</p>
                   </div>
                 </Link>
               ))}

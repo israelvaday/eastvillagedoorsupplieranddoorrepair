@@ -9,15 +9,15 @@ export function ServiceGrid({ city }: { city?: string }) {
     <section className="relative py-20">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="mb-10 flex flex-col items-center text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">What we do</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">What we do</p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-tight md:text-5xl">
             Doors built around the opening.
           </h2>
-          <p className="mt-3 max-w-2xl text-cream-600">
+          <p className="mt-3 max-w-2xl text-stone-600">
             Ten door services across Manhattan &amp; Brooklyn. Explore supply, installation, repair,
             hardware, and emergency options.
           </p>
-          <Link href="/services" className="mt-4 text-sm font-semibold text-teal-600 hover:text-teal-600">
+          <Link href="/services" className="mt-4 text-sm font-semibold text-indigo-600 hover:text-indigo-600">
             View all services →
           </Link>
         </div>

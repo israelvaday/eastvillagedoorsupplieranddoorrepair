@@ -122,15 +122,15 @@ export default function FAQPage() {
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 md:grid-cols-2 md:px-6">
           <div className="text-center md:text-left">
-            <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">FAQ</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">FAQ</p>
             <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
               Practical answers about <span className="text-accent-gradient">doors</span>.
             </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-cream-700 md:mx-0">
+            <p className="mx-auto mt-5 max-w-2xl text-stone-700 md:mx-0">
               Scope, hardware, fire ratings, installation, structural repair, access, and closeout.
             </p>
           </div>
-          <div className="relative aspect-[5/4] overflow-hidden rounded-3xl border border-teal-500/30">
+          <div className="relative aspect-[5/4] overflow-hidden rounded-3xl border border-indigo-500/30">
             <Image
               src={`${base}/photos/branding-generated--hero-east-village-door-nyc.png`}
               alt="NYC door supply and installation project inspiration"
@@ -143,14 +143,14 @@ export default function FAQPage() {
         </div>
       </section>
 
-      <section className="border-y border-cream-300 bg-cream-100 py-6">
+      <section className="border-y border-stone-300 bg-stone-100 py-6">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <ul className="flex flex-wrap items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider md:text-sm">
             {FAQ_SECTIONS.map((section) => (
               <li key={section.id}>
                 <a
                   href={`#${section.id}`}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-cream-300 bg-cream-50/70 px-3 py-1.5 text-cream-700 transition hover:border-teal-500/60 hover:text-teal-600"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-stone-300 bg-stone-50/70 px-3 py-1.5 text-stone-700 transition hover:border-indigo-500/60 hover:text-indigo-600"
                 >
                   <span>{section.emoji}</span>
                   {section.title}
@@ -170,7 +170,7 @@ export default function FAQPage() {
                 <h2 className="mt-1 font-display text-2xl font-extrabold tracking-tight md:text-3xl">
                   {section.title}
                 </h2>
-                <p className="mt-1 text-sm text-cream-500">{section.description}</p>
+                <p className="mt-1 text-sm text-stone-500">{section.description}</p>
               </div>
               <FAQAccordion items={[...section.items]} sectionId={section.id} />
             </div>

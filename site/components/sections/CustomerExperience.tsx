@@ -26,25 +26,25 @@ const COMMITMENTS = [
 
 export function CustomerExperience() {
   return (
-    <section className="relative border-t border-cream-300 py-20">
+    <section className="relative border-t border-stone-300 py-20">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">Customer experience</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">Customer experience</p>
           <h2 className="mt-2 font-display text-3xl font-bold tracking-tight md:text-5xl">
             What you can expect from {BIZ.name}.
           </h2>
-          <p className="mt-4 text-cream-600">
+          <p className="mt-4 text-stone-600">
             These are our service commitments, not customer testimonials or a published rating.
           </p>
         </div>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {COMMITMENTS.map(({ Icon, title, body }) => (
-            <article key={title} className="rounded-sm border border-cream-300 bg-cream-50/60 p-6">
-              <span className="grid h-11 w-11 place-items-center rounded-sm bg-teal-500/10 text-teal-600">
+            <article key={title} className="rounded-sm border border-stone-300 bg-stone-50/60 p-6">
+              <span className="grid h-11 w-11 place-items-center rounded-sm bg-indigo-500/10 text-indigo-600">
                 <Icon className="h-5 w-5" />
               </span>
               <h3 className="mt-4 font-display text-lg font-extrabold text-white">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-cream-600">{body}</p>
+              <p className="mt-2 text-sm leading-relaxed text-stone-600">{body}</p>
             </article>
           ))}
         </div>

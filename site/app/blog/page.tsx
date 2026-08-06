@@ -28,14 +28,14 @@ export default function BlogIndex() {
       <section className="relative bg-aurora py-20">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">{BIZ.name} guides</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">{BIZ.name} guides</p>
           <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
             <span className="text-accent-gradient">Door</span> guides for Brooklyn & NYC.
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-cream-700">
+          <p className="mx-auto mt-5 max-w-2xl text-stone-700">
             Installation, hardware, fire ratings, structural repair, code compliance, and project planning.
           </p>
-          <p className="mx-auto mt-2 max-w-2xl text-sm text-cream-500">
+          <p className="mx-auto mt-2 max-w-2xl text-sm text-stone-500">
             Article imagery is project inspiration, not a gallery of completed customer work.
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function BlogIndex() {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Link
             href={`/blog/${featured.slug}`}
-            className="group grid overflow-hidden rounded-3xl border border-cream-300 bg-cream-50/40 transition hover:-translate-y-0.5 hover:border-teal-500/40 md:grid-cols-2"
+            className="group grid overflow-hidden rounded-3xl border border-stone-300 bg-stone-50/40 transition hover:-translate-y-0.5 hover:border-indigo-500/40 md:grid-cols-2"
           >
             <div className="relative aspect-[16/10] md:aspect-auto">
               <Image
@@ -59,14 +59,14 @@ export default function BlogIndex() {
               />
             </div>
             <div className="flex flex-col justify-center gap-3 p-6 md:p-10">
-              <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-teal-500/40 bg-teal-500/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-teal-600">
+              <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-indigo-500/40 bg-indigo-500/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-indigo-600">
                 Featured · {featured.category}
               </span>
               <h2 className="font-display text-2xl font-extrabold tracking-tight md:text-4xl">
                 {featured.title}
               </h2>
-              <p className="text-cream-600 md:text-lg">{featured.excerpt}</p>
-              <div className="mt-2 flex flex-wrap items-center gap-4 text-xs text-cream-500">
+              <p className="text-stone-600 md:text-lg">{featured.excerpt}</p>
+              <div className="mt-2 flex flex-wrap items-center gap-4 text-xs text-stone-500">
                 <span className="inline-flex items-center gap-1.5">
                   <Calendar className="h-3.5 w-3.5" /> {formatDate(featured.date)}
                 </span>
@@ -74,7 +74,7 @@ export default function BlogIndex() {
                   <Clock className="h-3.5 w-3.5" /> {featured.readMinutes} min read
                 </span>
               </div>
-              <span className="mt-3 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-teal-600 group-hover:text-teal-600">
+              <span className="mt-3 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-indigo-600 group-hover:text-indigo-600">
                 Read the guide <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </span>
             </div>
@@ -90,7 +90,7 @@ export default function BlogIndex() {
               <Link
                 key={p.slug}
                 href={`/blog/${p.slug}`}
-                className="group flex flex-col overflow-hidden rounded-sm border border-cream-300 bg-cream-50/40 transition hover:-translate-y-0.5 hover:border-teal-500/40"
+                className="group flex flex-col overflow-hidden rounded-sm border border-stone-300 bg-stone-50/40 transition hover:-translate-y-0.5 hover:border-indigo-500/40"
               >
                 <div className="relative aspect-[16/10]">
                   <Image
@@ -102,14 +102,14 @@ export default function BlogIndex() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col gap-2 p-5">
-                  <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-cream-300 bg-cream-50/70 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-teal-600">
+                  <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-stone-300 bg-stone-50/70 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-indigo-600">
                     {p.category}
                   </span>
                   <h3 className="font-display text-lg font-extrabold leading-tight tracking-tight">
                     {p.title}
                   </h3>
-                  <p className="text-sm text-cream-600">{p.excerpt}</p>
-                  <div className="mt-auto flex items-center gap-3 pt-3 text-xs text-cream-500">
+                  <p className="text-sm text-stone-600">{p.excerpt}</p>
+                  <div className="mt-auto flex items-center gap-3 pt-3 text-xs text-stone-500">
                     <span className="inline-flex items-center gap-1.5">
                       <Calendar className="h-3.5 w-3.5" /> {formatDate(p.date)}
                     </span>
