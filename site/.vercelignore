@@ -1,0 +1,6 @@
+node_modules
+.next
+out
+.deploy
+*.log
+.env.local

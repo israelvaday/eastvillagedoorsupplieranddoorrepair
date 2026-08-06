@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /thank-you
+
+Host: https://eastvillagedoorsupplieranddoorrepair.com
+Sitemap: https://eastvillagedoorsupplieranddoorrepair.com/sitemap.xml
